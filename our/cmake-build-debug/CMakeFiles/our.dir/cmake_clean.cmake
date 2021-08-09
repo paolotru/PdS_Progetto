@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/our.dir/graph/CPT.cpp.obj"
+  "CMakeFiles/our.dir/graph/Graph.cpp.obj"
   "CMakeFiles/our.dir/graph/GraphElements.cpp.obj"
   "CMakeFiles/our.dir/main.cpp.obj"
   "our.exe"

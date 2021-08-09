@@ -126,6 +126,60 @@ our\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\our.dir\build
 .PHONY : our\fast
 
+graph\CPT.obj: graph\CPT.cpp.obj
+
+.PHONY : graph\CPT.obj
+
+# target to build an object file
+graph\CPT.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\our.dir\graph\CPT.cpp.obj
+.PHONY : graph\CPT.cpp.obj
+
+graph\CPT.i: graph\CPT.cpp.i
+
+.PHONY : graph\CPT.i
+
+# target to preprocess a source file
+graph\CPT.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\our.dir\graph\CPT.cpp.i
+.PHONY : graph\CPT.cpp.i
+
+graph\CPT.s: graph\CPT.cpp.s
+
+.PHONY : graph\CPT.s
+
+# target to generate assembly for a file
+graph\CPT.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\our.dir\graph\CPT.cpp.s
+.PHONY : graph\CPT.cpp.s
+
+graph\Graph.obj: graph\Graph.cpp.obj
+
+.PHONY : graph\Graph.obj
+
+# target to build an object file
+graph\Graph.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\our.dir\graph\Graph.cpp.obj
+.PHONY : graph\Graph.cpp.obj
+
+graph\Graph.i: graph\Graph.cpp.i
+
+.PHONY : graph\Graph.i
+
+# target to preprocess a source file
+graph\Graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\our.dir\graph\Graph.cpp.i
+.PHONY : graph\Graph.cpp.i
+
+graph\Graph.s: graph\Graph.cpp.s
+
+.PHONY : graph\Graph.s
+
+# target to generate assembly for a file
+graph\Graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\our.dir\graph\Graph.cpp.s
+.PHONY : graph\Graph.cpp.s
+
 graph\GraphElements.obj: graph\GraphElements.cpp.obj
 
 .PHONY : graph\GraphElements.obj
@@ -189,6 +243,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... our
+	@echo ... graph/CPT.obj
+	@echo ... graph/CPT.i
+	@echo ... graph/CPT.s
+	@echo ... graph/Graph.obj
+	@echo ... graph/Graph.i
+	@echo ... graph/Graph.s
 	@echo ... graph/GraphElements.obj
 	@echo ... graph/GraphElements.i
 	@echo ... graph/GraphElements.s

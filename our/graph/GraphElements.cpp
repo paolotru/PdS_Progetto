@@ -18,7 +18,7 @@ Node::~Node() {
 
 }
 
-Arc::Arc(NodeId n1, NodeId n2) : n_start(n1),n_destination(n2){
+Arc::Arc(Node n1, Node n2) : n_start(n1),n_destination(n2){
 
 }
 

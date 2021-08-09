@@ -80,6 +80,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/CPT.cpp">
+			<Option target="our"/>
+		</Unit>
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/CPT.h">
+			<Option target="our"/>
+		</Unit>
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/Graph.cpp">
+			<Option target="our"/>
+		</Unit>
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/Graph.h">
+			<Option target="our"/>
+		</Unit>
 		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.cpp">
 			<Option target="our"/>
 		</Unit>

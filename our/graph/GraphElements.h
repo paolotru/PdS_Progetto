@@ -4,6 +4,7 @@
 #ifndef OUR_GRAPHELEMENTS_H
 #define OUR_GRAPHELEMENTS_H
 #include <string>
+#include "CPT.h"
 
 typedef int NodeId;
 
@@ -12,7 +13,7 @@ private:
     std::string name;
     NodeId id;
     int n_states;
-    //cpt e vettore padri
+    std::shared_ptr<CPT> cpt;
 
 public:
     Node(std::string& name,NodeId id);
@@ -24,17 +25,13 @@ public:
 
 class Arc{
 private:
-    NodeId n_start,n_destination;
+    Node n_start,n_destination;
 public:
-    Arc(NodeId n1,NodeId n2);
+    Arc(Node n1,Node n2);
 
     Arc(const Arc& a);
 
     ~Arc();
-};
-
-class Graph {
-
 };
 
 

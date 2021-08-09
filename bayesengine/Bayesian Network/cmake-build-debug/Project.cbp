@@ -8,33 +8,33 @@
 		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\graphs\;CMake Files\src\graphs\graphStructure\;CMake Files\src\inference\;CMake Files\src\learning\;CMake Files\src\learning\io\;CMake Files\src\learning\io\base\;CMake Files\src\networks\;CMake Files\src\networks\io\;CMake Files\src\networks\io\base\;CMake Files\src\probability\;CMake Files\src\tools\;CMake Files\src\tools\base\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/cmake-build-debug"/>
+				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 all"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Bayesian-Network">
-				<Option output="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/cmake-build-debug/Bayesian-Network.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/cmake-build-debug"/>
+				<Option output="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/cmake-build-debug/Bayesian-Network.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/graphStructure"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/inference"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/learning/io/base"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/learning/io"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/io/base"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/io"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/probability"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/tools/base"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/tools"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/inference"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io/base"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/base"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/probability"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/tools/base"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/tools"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
@@ -43,30 +43,30 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 Bayesian-Network"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 Bayesian-Network"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Bayesian-Network/fast">
-				<Option output="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/cmake-build-debug/Bayesian-Network.lib" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/cmake-build-debug"/>
+				<Option output="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/cmake-build-debug/Bayesian-Network.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/graphStructure"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/inference"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/learning/io/base"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/learning/io"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/io/base"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/io"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/probability"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/tools/base"/>
-					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/tools"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/inference"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io/base"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/base"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/probability"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/tools/base"/>
+					<Add directory="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/tools"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"/>
@@ -75,15 +75,15 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 Bayesian-Network/fast"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 Bayesian-Network/fast"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="BNTarget">
-				<Option output="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/cmake-build-debug/BNTarget.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/cmake-build-debug"/>
+				<Option output="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/cmake-build-debug/BNTarget.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
@@ -96,15 +96,15 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 BNTarget"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 BNTarget"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="BNTarget/fast">
-				<Option output="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/cmake-build-debug/BNTarget.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/cmake-build-debug"/>
+				<Option output="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/cmake-build-debug/BNTarget.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
@@ -117,228 +117,228 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 BNTarget/fast"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 BNTarget/fast"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/cmake-build-debug"/>
+				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 edit_cache"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/cmake-build-debug"/>
+				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\bayesengine\Bayesian Network\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/main.cpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/main.cpp">
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/DAG.cpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/DAG.cpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/DAG.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/DAG.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/JunctionTree.cpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/JunctionTree.cpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/JunctionTree.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/JunctionTree.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/UndirectedGraph.cpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/UndirectedGraph.cpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/UndirectedGraph.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/UndirectedGraph.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/graphStructure/ArcSet.cpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/ArcSet.cpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/graphStructure/ArcSet.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/ArcSet.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/graphStructure/Clique.cpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/Clique.cpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/graphStructure/Clique.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/Clique.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/graphStructure/EdgeSet.cpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/EdgeSet.cpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/graphStructure/EdgeSet.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/EdgeSet.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/graphStructure/GraphElements.cpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/GraphElements.cpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/graphStructure/GraphElements.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/GraphElements.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/inference/LazyPropagation.cpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/inference/LazyPropagation.cpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/inference/LazyPropagation.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/inference/LazyPropagation.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/learning/io/CSVDataStructure.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io/CSVDataStructure.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/learning/io/CSVReader.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io/CSVReader.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/learning/io/base/rapidcsv.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io/base/rapidcsv.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/BayesianNet.cpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/BayesianNet.cpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/BayesianNet.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/BayesianNet.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/io/BNReader.cpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/BNReader.cpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/io/BNReader.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/BNReader.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/io/BNWriter.cpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/BNWriter.cpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/io/BNWriter.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/BNWriter.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/io/base/rapidxml.hpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/base/rapidxml.hpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/io/base/rapidxml_iterators.hpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/base/rapidxml_iterators.hpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/io/base/rapidxml_print.hpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/base/rapidxml_print.hpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/io/base/rapidxml_utils.hpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/base/rapidxml_utils.hpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/probability/CPT.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/probability/CPT.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/probability/Potential.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/probability/Potential.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/tools/ThreadPoolManager.cpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/tools/ThreadPoolManager.cpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/tools/ThreadPoolManager.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/tools/ThreadPoolManager.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/tools/VariableNodeMap.cpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/tools/VariableNodeMap.cpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/tools/VariableNodeMap.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/tools/VariableNodeMap.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/tools/base/COW.cpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/tools/base/COW.cpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/tools/base/COW.h">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/tools/base/COW.h">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/tools/base/thread_pool.hpp">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/tools/base/thread_pool.hpp">
 			<Option target="Bayesian-Network"/>
 			<Option target="BNTarget"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/CMakeLists.txt">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/CMakeLists.txt">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/CMakeLists.txt">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\graphs\"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/graphs/graphStructure/CMakeLists.txt">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\graphs\graphStructure\"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/inference/CMakeLists.txt">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/inference/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\inference\"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/learning/CMakeLists.txt">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/learning/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\learning\"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/learning/io/CMakeLists.txt">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\learning\io\"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/learning/io/base/CMakeLists.txt">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io/base/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\learning\io\base\"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/CMakeLists.txt">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\networks\"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/io/CMakeLists.txt">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\networks\io\"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/networks/io/base/CMakeLists.txt">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/base/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\networks\io\base\"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/probability/CMakeLists.txt">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/probability/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\probability\"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/tools/CMakeLists.txt">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/tools/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\tools\"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/Bayesian Network/src/tools/base/CMakeLists.txt">
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/bayesengine/Bayesian Network/src/tools/base/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\tools\base\"/>
 		</Unit>
 	</Project>
