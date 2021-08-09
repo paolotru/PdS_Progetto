@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 #include <map>
-#include "GraphElements.h"
+#include "../graph/GraphElements.h"
 
 typedef std::string Status;
 

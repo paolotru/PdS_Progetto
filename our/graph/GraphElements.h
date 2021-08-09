@@ -4,7 +4,7 @@
 #ifndef OUR_GRAPHELEMENTS_H
 #define OUR_GRAPHELEMENTS_H
 #include <string>
-#include "CPT.h"
+#include "../probability/CPT.h"
 
 typedef int NodeId;
 
