@@ -78,7 +78,7 @@ float computeProbability(std::map <Node, std::vector<Node>> &factors, Status s, 
     for(auto& f : factors){
         std::vector<ConditionalProbability> cpt = f.first.cpt->getCPTTable();
         for(auto& c : cpt){
-            if(checkParentVectors(c,variables)) // da implementare funzione
+            if(c.checkParentVectors(variables, s))
                 result *= c.getProbability();
         }
     }

@@ -21,7 +21,7 @@ bool Node::operator==(const Node &rhs) const {
 }
 
 bool Node::operator!=(const Node &rhs) const {
-    return !(rhs == *this);
+    return id != rhs.id;
 }
 
 std::vector<Status> Node::getStatuses() {

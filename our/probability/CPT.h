@@ -9,9 +9,16 @@
 
 
 class VariableInformations{
-private:
     std::map<Node, Status> parents;
     Status status;
+public:
+    Status getStatus(){
+        return status;
+    }
+    std::map<Node, Status> getParents(){
+        return parents;
+    }
+
 };
 
 class ConditionalProbability{
@@ -26,6 +33,24 @@ public:
 
     float getProbability(){
         return probability;
+    };
+
+    bool checkParentVectors(std::map<Node, Status> variables, Status s){
+        if(s != v_info->getStatus())
+            return false;
+
+        for(auto& cp : v_info->getParents()){
+            bool found = false;
+            for(auto& v : variables){
+                if(v.first == cp.first && v.second == cp.second)
+                    found = true;
+            }
+
+            if(!found)
+                return false;
+        }
+
+        return true;
     }
 };
 
