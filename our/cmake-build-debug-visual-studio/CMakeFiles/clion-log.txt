@@ -1,0 +1,8 @@
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" "C:\Users\LucaS\OneDrive\Desktop\Università\Programmazione di Sistema\PdS_Progetto\our"
+CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
+  CMake 3.19 or higher is required.  You are running version 3.17.5
+
+
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/LucaS/OneDrive/Desktop/UniversitÃ /Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug-visual-studio/CMakeFiles/CMakeOutput.log".
+See also "C:/Users/LucaS/OneDrive/Desktop/UniversitÃ /Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug-visual-studio/CMakeFiles/CMakeError.log".

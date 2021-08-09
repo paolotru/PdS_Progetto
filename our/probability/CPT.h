@@ -6,7 +6,7 @@
 #include <map>
 #include "../graph/GraphElements.h"
 
-typedef std::string Status;
+
 
 class VariableInformations{
 private:

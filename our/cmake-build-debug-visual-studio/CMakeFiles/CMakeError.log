@@ -1,0 +1,54 @@
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/LucaS/OneDrive/Desktop/Università/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug-visual-studio/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake /nologo cmTC_3707c\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29910\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_3707c.dir\build.make /nologo -L                  CMakeFiles\cmTC_3707c.dir\build
+Building C object CMakeFiles/cmTC_3707c.dir/testCCompiler.c.obj
+	C:\PROGRA~2\MICROS~2\2019\BUILDT~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @C:\Users\LucaS\AppData\Local\Temp\nm8F9A.tmp
+testCCompiler.c
+Linking C executable cmTC_3707c.exe
+	"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_3707c.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\BUILDT~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_3707c.dir\objects1.rsp @C:\Users\LucaS\AppData\Local\Temp\nm90F3.tmp
+LINK Pass 1: command "C:\PROGRA~2\MICROS~2\2019\BUILDT~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_3707c.dir\objects1.rsp /out:cmTC_3707c.exe /implib:cmTC_3707c.lib /pdb:C:\Users\LucaS\OneDrive\Desktop\Universit?\Programmazione di Sistema\PdS_Progetto\our\cmake-build-debug-visual-studio\CMakeFiles\CMakeTmp\cmTC_3707c.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_3707c.dir/intermediate.manifest CMakeFiles\cmTC_3707c.dir/manifest.res" failed (exit code 1201) with the following output:
+LINK : fatal error LNK1201: errore di scrittura nel database di programma 'C:\Users\LucaS\OneDrive\Desktop\Universit?\Programmazione di Sistema\PdS_Progetto\our\cmake-build-debug-visual-studio\CMakeFiles\CMakeTmp\cmTC_3707c.pdb'; verificare che lo spazio su disco sia sufficiente, il percorso sia valido o il privilegio sia sufficiente
+NMAKE : fatal error U1077: '"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe"' : codice restituito '0xffffffff'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29910\bin\HostX86\x86\nmake.exe"' : codice restituito '0x2'
+Stop.
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/LucaS/OneDrive/Desktop/Università/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug-visual-studio/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake /nologo cmTC_efd3b\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29910\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_efd3b.dir\build.make /nologo -L                  CMakeFiles\cmTC_efd3b.dir\build
+Building C object CMakeFiles/cmTC_efd3b.dir/testCCompiler.c.obj
+	C:\PROGRA~2\MICROS~2\2019\BUILDT~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @C:\Users\LucaS\AppData\Local\Temp\nmFE04.tmp
+testCCompiler.c
+Linking C executable cmTC_efd3b.exe
+	"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_efd3b.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\BUILDT~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_efd3b.dir\objects1.rsp @C:\Users\LucaS\AppData\Local\Temp\nmFE34.tmp
+LINK Pass 1: command "C:\PROGRA~2\MICROS~2\2019\BUILDT~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_efd3b.dir\objects1.rsp /out:cmTC_efd3b.exe /implib:cmTC_efd3b.lib /pdb:C:\Users\LucaS\OneDrive\Desktop\Universit?\Programmazione di Sistema\PdS_Progetto\our\cmake-build-debug-visual-studio\CMakeFiles\CMakeTmp\cmTC_efd3b.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_efd3b.dir/intermediate.manifest CMakeFiles\cmTC_efd3b.dir/manifest.res" failed (exit code 1201) with the following output:
+LINK : fatal error LNK1201: errore di scrittura nel database di programma 'C:\Users\LucaS\OneDrive\Desktop\Universit?\Programmazione di Sistema\PdS_Progetto\our\cmake-build-debug-visual-studio\CMakeFiles\CMakeTmp\cmTC_efd3b.pdb'; verificare che lo spazio su disco sia sufficiente, il percorso sia valido o il privilegio sia sufficiente
+NMAKE : fatal error U1077: '"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe"' : codice restituito '0xffffffff'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29910\bin\HostX86\x86\nmake.exe"' : codice restituito '0x2'
+Stop.
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/LucaS/OneDrive/Desktop/Università/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug-visual-studio/CMakeFiles/CMakeTmp
+
+Run Build Command(s):nmake /nologo cmTC_8ca7d\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29910\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_8ca7d.dir\build.make /nologo -L                  CMakeFiles\cmTC_8ca7d.dir\build
+Building C object CMakeFiles/cmTC_8ca7d.dir/testCCompiler.c.obj
+	C:\PROGRA~2\MICROS~2\2019\BUILDT~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @C:\Users\LucaS\AppData\Local\Temp\nm7652.tmp
+testCCompiler.c
+Linking C executable cmTC_8ca7d.exe
+	"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_8ca7d.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\BUILDT~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_8ca7d.dir\objects1.rsp @C:\Users\LucaS\AppData\Local\Temp\nm7682.tmp
+LINK Pass 1: command "C:\PROGRA~2\MICROS~2\2019\BUILDT~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_8ca7d.dir\objects1.rsp /out:cmTC_8ca7d.exe /implib:cmTC_8ca7d.lib /pdb:C:\Users\LucaS\OneDrive\Desktop\Universit?\Programmazione di Sistema\PdS_Progetto\our\cmake-build-debug-visual-studio\CMakeFiles\CMakeTmp\cmTC_8ca7d.pdb /version:0.0 /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_8ca7d.dir/intermediate.manifest CMakeFiles\cmTC_8ca7d.dir/manifest.res" failed (exit code 1201) with the following output:
+LINK : fatal error LNK1201: errore di scrittura nel database di programma 'C:\Users\LucaS\OneDrive\Desktop\Universit?\Programmazione di Sistema\PdS_Progetto\our\cmake-build-debug-visual-studio\CMakeFiles\CMakeTmp\cmTC_8ca7d.pdb'; verificare che lo spazio su disco sia sufficiente, il percorso sia valido o il privilegio sia sufficiente
+NMAKE : fatal error U1077: '"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe"' : codice restituito '0xffffffff'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29910\bin\HostX86\x86\nmake.exe"' : codice restituito '0x2'
+Stop.
+
+
+

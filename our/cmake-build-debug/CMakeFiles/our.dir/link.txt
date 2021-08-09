@@ -1,1 +1,0 @@
-/usr/bin/c++.exe -g -Wl,--enable-auto-import CMakeFiles/our.dir/main.cpp.o CMakeFiles/our.dir/graph/GraphElements.cpp.o CMakeFiles/our.dir/graph/Graph.cpp.o CMakeFiles/our.dir/probability/CPT.cpp.o -o our.exe -Wl,--out-implib,libour.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

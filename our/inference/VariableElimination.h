@@ -9,6 +9,7 @@
 #include <memory>
 
 class VariableElimination {
+    float computeStatusProbability(Graph& g, Node& n,Status& s,std::map<Node, std::vector<Node>>& factors);
 public:
     static void inferVariableProbability(Graph& g);
 };

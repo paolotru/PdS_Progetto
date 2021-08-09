@@ -4,7 +4,7 @@
 
 #include "VariableElimination.h"
 
-void VariableElimination::inferVariableProbability(Graph &g){
+void VariableElimination::inferVariableProbability(Graph& g){
 
     std::vector<Arc> arcs = g.getArcs();
     std::vector<Node> nodes = g.getNodes();
@@ -33,6 +33,41 @@ void VariableElimination::inferVariableProbability(Graph &g){
             continue;
         }
 
+        std::vector<Status> statuses = n.getStatuses();
+        for(auto& status: statuses){
+            probability = computeStatusProbability(g, n, status, factors);
+            //aggiungi alla cpt con status=status e prob=probability senza parents
+
+        }
+    }
+}
+
+float VariableElimination::computeStatusProbability(Graph &g, Node &node, Status &s,
+                                                    std::map <Node, std::vector<Node>> &factors) {
+    auto nodes = g.getNodes();
+    std::vector<Node> rightNodes;
+
+    for(auto& n:nodes) {
+        if(n !== node)
+            rightNode.push_back(n);
+    }
+    std::vector<Node, Status> variables;
+    float prob = 0;
+    recursiveFunction(rightNodes, node, s, factors, variables, &prob);
+    return prob;
+}
+
+float recursiveFunction(std::vector<Node>& nodes, Node node, Status s, std::map <Node, std::vector<Node>> &factors, std::map<Node, Status> variables, float* p){
+
+    if(nodes.empty()){
+
     }
 
+    Node n = nodes.erase();
+    nodes.pop_back();
+    for(auto& status: n.getStatuses()){
+        variables.insert(n,status);
+        recursiveFunction(nodes, node, s, factors, variables);
+        variables.erase(n);
+    }
 };
