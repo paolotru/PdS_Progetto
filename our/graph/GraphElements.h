@@ -10,7 +10,6 @@ typedef int NodeId;
 typedef std::string Status;
 
 class Node{
-private:
     std::string name;
     NodeId id;
     int n_states;

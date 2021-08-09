@@ -57,10 +57,11 @@ float VariableElimination::computeStatusProbability(Graph &g, Node &node, Status
     return prob;
 }
 
-float recursiveFunction(std::vector<Node>& nodes, Node node, Status s, std::map <Node, std::vector<Node>> &factors, std::map<Node, Status> variables, float* p){
+void recursiveFunction(std::vector<Node>& nodes, Node node, Status s, std::map <Node, std::vector<Node>> &factors, std::map<Node, Status> variables, float* p){
 
     if(nodes.empty()){
-
+        *p += computeProbability(factors, s, variables, node);
+        return;
     }
 
     Node n = nodes.erase();
@@ -71,3 +72,15 @@ float recursiveFunction(std::vector<Node>& nodes, Node node, Status s, std::map 
         variables.erase(n);
     }
 };
+
+float computeProbability(std::map <Node, std::vector<Node>> &factors, Status s, std::map<Node, Status> variables, Node node){
+    float result = 1;
+    for(auto& f : factors){
+        std::vector<ConditionalProbability> cpt = f.first.cpt->getCPTTable();
+        for(auto& c : cpt){
+            if(checkParentVectors(c,variables)) // da implementare funzione
+                result *= c.getProbability();
+        }
+    }
+    return result;
+}

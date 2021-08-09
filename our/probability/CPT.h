@@ -23,6 +23,10 @@ public:
     std::shared_ptr<VariableInformations> getVariableInfo(){
         return v_info;
     }
+
+    float getProbability(){
+        return probability;
+    }
 };
 
 class CPT{
