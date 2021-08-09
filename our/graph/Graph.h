@@ -3,21 +3,21 @@
 //
 #ifndef OUR_GRAPH_H
 #define OUR_GRAPH_H
-
 #include "GraphElements.h"
+#include "vector"
 
 
 class Graph {
     std::vector<Node> nodes;
     std::vector<Arc> arcs;
 public:
-    std::vector<Node> getNodes(){
-        return this->nodes;
-    }
+    Graph(std::vector<Node> n,std::vector<Arc> a);
 
-    std::vector<Arc> getArcs(){
-        return this->arcs;
-    }
+    virtual ~Graph();
+
+    std::vector<Node> getNodes();
+
+    std::vector<Arc> getArcs();
 
 };
 
