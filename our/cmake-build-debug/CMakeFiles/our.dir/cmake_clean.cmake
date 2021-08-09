@@ -1,11 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/our.dir/graph/CPT.cpp.obj"
-  "CMakeFiles/our.dir/graph/Graph.cpp.obj"
-  "CMakeFiles/our.dir/graph/GraphElements.cpp.obj"
-  "CMakeFiles/our.dir/main.cpp.obj"
+  "CMakeFiles/our.dir/graph/Graph.cpp.o"
+  "CMakeFiles/our.dir/graph/GraphElements.cpp.o"
+  "CMakeFiles/our.dir/main.cpp.o"
+  "CMakeFiles/our.dir/probability/CPT.cpp.o"
+  "libour.dll.a"
   "our.exe"
-  "our.exe.manifest"
-  "our.lib"
   "our.pdb"
 )
 
