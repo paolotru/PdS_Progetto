@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="PdS_Progetto"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PdS_Progetto">
+				<Option output="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/cmake-build-debug/PdS_Progetto.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/inference"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/learning"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io/base"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/base"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/probability"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/tools"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/tools/base"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/our/graph"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/our/probability"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 PdS_Progetto"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PdS_Progetto/fast">
+				<Option output="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/cmake-build-debug/PdS_Progetto.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/inference"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/learning"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io/base"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/base"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/probability"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/tools"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/tools/base"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/our/graph"/>
+					<Add directory="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/our/probability"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/10/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 PdS_Progetto/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Users/elite/Desktop/WEB\ APPLICATION/PdS_Progetto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/main.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/DAG.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/DAG.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/JunctionTree.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/JunctionTree.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/UndirectedGraph.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/UndirectedGraph.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/ArcSet.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/ArcSet.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/Clique.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/Clique.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/EdgeSet.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/EdgeSet.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/GraphElements.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/graphs/graphStructure/GraphElements.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/inference/LazyPropagation.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/inference/LazyPropagation.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io/CSVDataStructure.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io/CSVReader.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/learning/io/base/rapidcsv.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks/BayesianNet.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks/BayesianNet.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/BNReader.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/BNReader.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/BNWriter.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/BNWriter.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/base/rapidxml.hpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/base/rapidxml_iterators.hpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/base/rapidxml_print.hpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/networks/io/base/rapidxml_utils.hpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/probability/CPT.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/probability/Potential.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/tools/ThreadPoolManager.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/tools/ThreadPoolManager.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/tools/VariableNodeMap.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/tools/VariableNodeMap.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/tools/base/COW.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/tools/base/COW.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/bayesengine/Bayesian Network/src/tools/base/thread_pool.hpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/our/graph/Graph.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/our/graph/Graph.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/our/graph/GraphElements.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/our/graph/GraphElements.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/our/main.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/our/probability/CPT.cpp">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/our/probability/CPT.h">
+			<Option target="PdS_Progetto"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
