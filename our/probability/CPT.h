@@ -2,6 +2,7 @@
 #define OUR_CPT_H
 #include <string>
 #include <vector>
+#include <memory>
 #include <map>
 #include "../graph/GraphElements.h"
 
@@ -12,15 +13,26 @@ private:
     std::map<Node, Status> parents;
     Status status;
 };
+
 class ConditionalProbability{
-private:
+
     std::shared_ptr<VariableInformations> v_info;
     float probability;
+
+public:
+    std::shared_ptr<VariableInformations> getVariableInfo(){
+        return v_info;
+    }
 };
 
-class CPT {
+class CPT{
 private:
+    bool hasDependence;
     std::vector<ConditionalProbability> cpt_table;
+public:
+    std::vector<ConditionalProbability> getCPTTable(){
+        return this->cpt_table;
+    }
 };
 
 
