@@ -21,17 +21,29 @@ public:
     Node(const Node& n);
 
     ~Node();
+
+    std::shared_ptr<CPT> getCPT(){
+        return this->cpt;
+    }
 };
 
 class Arc{
 private:
-    Node n_start,n_destination;
+    Node source, destination;
 public:
     Arc(Node n1,Node n2);
 
     Arc(const Arc& a);
 
     ~Arc();
+
+    Node& getSource(){
+        return source;
+    }
+
+    Node& getDestination(){
+        return destination;
+    }
 };
 
 

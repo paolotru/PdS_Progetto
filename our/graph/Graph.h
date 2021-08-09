@@ -4,8 +4,20 @@
 #ifndef OUR_GRAPH_H
 #define OUR_GRAPH_H
 
+#include "GraphElements.h"
+
 
 class Graph {
+    std::vector<Node> nodes;
+    std::vector<Arc> arcs;
+public:
+    std::vector<Node> getNodes(){
+        return this->nodes;
+    }
+
+    std::vector<Arc> getArcs(){
+        return this->arcs;
+    }
 
 };
 
