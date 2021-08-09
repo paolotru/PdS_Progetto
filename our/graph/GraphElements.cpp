@@ -18,7 +18,7 @@ Node::~Node() {
 
 }
 
-Arc::Arc(Node n1, Node n2) : n_start(n1),n_destination(n2){
+Arc::Arc(Node n1, Node n2) : start(n1),destination(n2){
 
 }
 
@@ -27,6 +27,6 @@ Arc::~Arc() {
 }
 
 Arc::Arc(const Arc &a) {
-    n_destination=a.n_destination;
-    n_start=a.n_start;
+    destination=a.destination;
+    start=a.start;
 }

@@ -23,9 +23,16 @@ void VariableElimination::inferVariableProbability(Graph &g){
         }
     }
 
+    Graph output{};
+
     for(Node& n: nodes){
-        if(!n.getCPT()->hasDependence)
+        if(!n.getCPT()->hasDependence) {
+            output.addNode(n);
+            /* si può migliorare facendo che graph abbia ptr a nodi e archi, in questo modo il ptr
+            può essere condiviso e occupare meno memoria*/
             continue;
+        }
+
     }
 
 };
