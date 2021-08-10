@@ -9,6 +9,7 @@
 
 
 class VariableInformations{
+private:
     std::map<Node, Status> parents;
     Status status;
 public:
@@ -18,14 +19,12 @@ public:
     std::map<Node, Status> getParents(){
         return parents;
     }
-
 };
 
 class ConditionalProbability{
-
+private:
     std::shared_ptr<VariableInformations> v_info;
     float probability;
-
 public:
     std::shared_ptr<VariableInformations> getVariableInfo(){
         return v_info;
