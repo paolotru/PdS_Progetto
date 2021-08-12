@@ -222,6 +222,60 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make CMakeFiles/our.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+network/BayesianNetwork.obj: network/BayesianNetwork.cpp.obj
+
+.PHONY : network/BayesianNetwork.obj
+
+# target to build an object file
+network/BayesianNetwork.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make CMakeFiles/our.dir/network/BayesianNetwork.cpp.obj
+.PHONY : network/BayesianNetwork.cpp.obj
+
+network/BayesianNetwork.i: network/BayesianNetwork.cpp.i
+
+.PHONY : network/BayesianNetwork.i
+
+# target to preprocess a source file
+network/BayesianNetwork.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make CMakeFiles/our.dir/network/BayesianNetwork.cpp.i
+.PHONY : network/BayesianNetwork.cpp.i
+
+network/BayesianNetwork.s: network/BayesianNetwork.cpp.s
+
+.PHONY : network/BayesianNetwork.s
+
+# target to generate assembly for a file
+network/BayesianNetwork.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make CMakeFiles/our.dir/network/BayesianNetwork.cpp.s
+.PHONY : network/BayesianNetwork.cpp.s
+
+network/reader.obj: network/reader.cpp.obj
+
+.PHONY : network/reader.obj
+
+# target to build an object file
+network/reader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make CMakeFiles/our.dir/network/reader.cpp.obj
+.PHONY : network/reader.cpp.obj
+
+network/reader.i: network/reader.cpp.i
+
+.PHONY : network/reader.i
+
+# target to preprocess a source file
+network/reader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make CMakeFiles/our.dir/network/reader.cpp.i
+.PHONY : network/reader.cpp.i
+
+network/reader.s: network/reader.cpp.s
+
+.PHONY : network/reader.s
+
+# target to generate assembly for a file
+network/reader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make CMakeFiles/our.dir/network/reader.cpp.s
+.PHONY : network/reader.cpp.s
+
 probability/CPT.obj: probability/CPT.cpp.obj
 
 .PHONY : probability/CPT.obj
@@ -267,6 +321,12 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... network/BayesianNetwork.obj
+	@echo ... network/BayesianNetwork.i
+	@echo ... network/BayesianNetwork.s
+	@echo ... network/reader.obj
+	@echo ... network/reader.i
+	@echo ... network/reader.s
 	@echo ... probability/CPT.obj
 	@echo ... probability/CPT.i
 	@echo ... probability/CPT.s

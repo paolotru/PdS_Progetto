@@ -1,6 +1,3 @@
-//
-// Created by S290225 on 09/08/2021.
-//
 #ifndef OUR_GRAPHELEMENTS_H
 #define OUR_GRAPHELEMENTS_H
 #include <string>

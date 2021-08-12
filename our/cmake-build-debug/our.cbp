@@ -95,6 +95,18 @@
 		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/main.cpp">
 			<Option target="our"/>
 		</Unit>
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/BayesianNetwork.cpp">
+			<Option target="our"/>
+		</Unit>
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/BayesianNetwork.h">
+			<Option target="our"/>
+		</Unit>
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/reader.cpp">
+			<Option target="our"/>
+		</Unit>
+		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/reader.h">
+			<Option target="our"/>
+		</Unit>
 		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/probability/CPT.cpp">
 			<Option target="our"/>
 		</Unit>

@@ -1,3 +1,11 @@
+//
+// Created by S290225 on 11/08/2021.
+//
+
+#ifndef OUR_READER_H
+#define OUR_READER_H
+
+
 #pragma once
 
 #include <string>
@@ -5,8 +13,8 @@
 #include <sstream>
 
 #include "base/rapidxml.hpp"
-#include "../BayesianNet.h"
-#include "../../probability/CPT.h"
+#include "BayesianNetwork.h"
+#include "../probability/CPT.h"
 
 using namespace rapidxml;
 
@@ -16,7 +24,7 @@ using namespace rapidxml;
 template <class T = float>
 class BNReader {
 public:
-    BNReader() {};
+    BNReader() = default;;
 
     //loads the bayesian network from the given file
     void loadNetworkFromFile(const std::string& fileName, std::shared_ptr<BayesianNetwork<T>> bn) {
@@ -47,7 +55,7 @@ public:
 
             std::string parents;
 
-            std::vector<VarStates> variablesOrder;
+            std::vector<VariableInformations> variablesOrder;
 
             std::vector<std::vector<int>> variablesCombinations;
 
@@ -111,7 +119,8 @@ public:
 
             int numResultingStates = splitResultingStates(resultingStates, resultingStatesSplitted);
 
-            CPT<T> cpt(varName, CPTcounter, stateNames);
+            CPT cpt(varName, CPTcounter, stateNames);
+            //varname e nome in nodo, ogni nodo cpt con stati
 
             cpt.addVariablesOrder(std::move(variablesOrder));
 
@@ -229,3 +238,6 @@ private:
         return resultingStatesSplitted.size();
     }
 };
+
+
+#endif //OUR_READER_H
