@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/Graph.cpp" "C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/CMakeFiles/our.dir/graph/Graph.cpp.obj"
   "C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.cpp" "C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/CMakeFiles/our.dir/graph/GraphElements.cpp.obj"
+  "C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/inference/VariableElimination.cpp" "C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/CMakeFiles/our.dir/inference/VariableElimination.cpp.obj"
   "C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/main.cpp" "C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/CMakeFiles/our.dir/main.cpp.obj"
   "C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/BayesianNetwork.cpp" "C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/CMakeFiles/our.dir/network/BayesianNetwork.cpp.obj"
   "C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/reader.cpp" "C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/CMakeFiles/our.dir/network/reader.cpp.obj"

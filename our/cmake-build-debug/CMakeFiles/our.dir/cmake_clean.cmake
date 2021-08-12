@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/our.dir/graph/Graph.cpp.obj"
   "CMakeFiles/our.dir/graph/GraphElements.cpp.obj"
+  "CMakeFiles/our.dir/inference/VariableElimination.cpp.obj"
   "CMakeFiles/our.dir/main.cpp.obj"
   "CMakeFiles/our.dir/network/BayesianNetwork.cpp.obj"
   "CMakeFiles/our.dir/network/reader.cpp.obj"

@@ -2,6 +2,7 @@
 #define OUR_GRAPHELEMENTS_H
 #include <string>
 #include <memory>
+#include <vector>
 #include "../probability/CPT.h"
 
 typedef int NodeId;

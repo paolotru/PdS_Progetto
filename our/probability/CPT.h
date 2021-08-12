@@ -4,19 +4,19 @@
 #include <vector>
 #include <memory>
 #include <map>
-#include "../graph/GraphElements.h"
 
-
+typedef int NodeId;
+typedef std::string Status;
 
 class VariableInformations{
 private:
-    std::map<Node, Status> parents;
+    std::map<NodeId, Status> parents;
     Status status;
 public:
     Status getStatus(){
         return status;
     }
-    std::map<Node, Status> getParents(){
+    std::map<NodeId, Status> getParents(){
         return parents;
     }
 };
@@ -34,7 +34,7 @@ public:
         return probability;
     };
 
-    bool checkParentVectors(std::map<Node, Status> variables, Status s){
+    bool checkParentVectors(std::map<NodeId, Status> variables, Status s){
         if(s != v_info->getStatus())
             return false;
 
@@ -60,6 +60,9 @@ private:
 public:
     std::vector<ConditionalProbability> getCPTTable(){
         return this->cpt_table;
+    }
+    bool isHasDependence() const {
+        return hasDependence;
     }
 };
 

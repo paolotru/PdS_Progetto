@@ -195,6 +195,33 @@ graph/GraphElements.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make CMakeFiles/our.dir/graph/GraphElements.cpp.s
 .PHONY : graph/GraphElements.cpp.s
 
+inference/VariableElimination.obj: inference/VariableElimination.cpp.obj
+
+.PHONY : inference/VariableElimination.obj
+
+# target to build an object file
+inference/VariableElimination.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make CMakeFiles/our.dir/inference/VariableElimination.cpp.obj
+.PHONY : inference/VariableElimination.cpp.obj
+
+inference/VariableElimination.i: inference/VariableElimination.cpp.i
+
+.PHONY : inference/VariableElimination.i
+
+# target to preprocess a source file
+inference/VariableElimination.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make CMakeFiles/our.dir/inference/VariableElimination.cpp.i
+.PHONY : inference/VariableElimination.cpp.i
+
+inference/VariableElimination.s: inference/VariableElimination.cpp.s
+
+.PHONY : inference/VariableElimination.s
+
+# target to generate assembly for a file
+inference/VariableElimination.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\our.dir\build.make CMakeFiles/our.dir/inference/VariableElimination.cpp.s
+.PHONY : inference/VariableElimination.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -318,6 +345,9 @@ help:
 	@echo ... graph/GraphElements.obj
 	@echo ... graph/GraphElements.i
 	@echo ... graph/GraphElements.s
+	@echo ... inference/VariableElimination.obj
+	@echo ... inference/VariableElimination.i
+	@echo ... inference/VariableElimination.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

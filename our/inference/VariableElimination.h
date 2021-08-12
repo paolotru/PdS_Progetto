@@ -1,9 +1,9 @@
 //
-// Created by LucaS on 09/08/2021.
+// Created by S290225 on 12/08/2021.
 //
 
-#ifndef PDS_PROGETTO_VARIABLEELIMINATION_H
-#define PDS_PROGETTO_VARIABLEELIMINATION_H
+#ifndef OUR_VARIABLEELIMINATION_H
+#define OUR_VARIABLEELIMINATION_H
 #include "../graph/Graph.h"
 #include "../graph/GraphElements.h"
 #include <memory>
@@ -15,4 +15,4 @@ public:
 };
 
 
-#endif //PDS_PROGETTO_VARIABLEELIMINATION_H
+#endif //OUR_VARIABLEELIMINATION_H
