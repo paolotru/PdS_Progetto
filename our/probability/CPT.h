@@ -13,6 +13,10 @@ private:
     std::map<NodeId, Status> parents;
     Status status;
 public:
+    VariableInformations(std::map<NodeId,Status> m, Status s){
+        parents = m;
+        status = s;
+    }
     Status getStatus(){
         return status;
     }
@@ -26,6 +30,11 @@ private:
     std::shared_ptr<VariableInformations> v_info;
     float probability;
 public:
+    ConditionalProbability(std::shared_ptr<VariableInformations> vi, float p){
+        v_info = vi;
+        probability = p;
+    }
+
     std::shared_ptr<VariableInformations> getVariableInfo(){
         return v_info;
     }
@@ -58,11 +67,18 @@ private:
     bool hasDependence;
     std::vector<ConditionalProbability> cpt_table;
 public:
+    CPT(){
+        hasDependence = false;
+    }
     std::vector<ConditionalProbability> getCPTTable(){
         return this->cpt_table;
     }
     bool isHasDependence() const {
         return hasDependence;
+    }
+
+    void addProbability(ConditionalProbability p){
+        cpt_table.push_back(p);
     }
 };
 

@@ -15,9 +15,15 @@ Graph::Graph(std::vector<Node> n, std::vector<Arc> a) {
     arcs=std::move(a);
 }
 
+Graph::Graph(){};
+
 void Graph::addArc(NodeId n1, NodeId n2) {
     //nodes.push_back(n1)
     //arcs.push_back(new Arc(n1,n2));
 }
 
 Graph::~Graph() = default;
+
+void Graph::addNode(Node n) {
+    nodes.push_back(n);
+};

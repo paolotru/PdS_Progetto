@@ -14,6 +14,8 @@ Node::Node(const Node &n) {
     n_states=n.n_states;
 }
 
+Node::Node(){};
+
 Node::~Node() = default;
 
 bool Node::operator==(const Node &rhs) const {
@@ -48,4 +50,7 @@ Node & Arc::getDestination() {
     return destination;
 }
 
+NodeId Node::getNodeId() const{
+    return id;
+}
 

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our
+# Install script for directory: C:/Users/LucaS/OneDrive/Desktop/Universita'/Programmazione di Sistema/PdS_Progetto/our
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/LucaS/OneDrive/Desktop/Universita'/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

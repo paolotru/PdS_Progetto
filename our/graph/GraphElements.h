@@ -24,7 +24,11 @@ public:
 
     Node(const Node& n);
 
+    Node();
+
     ~Node();
+
+    NodeId getNodeId() const;
 
     std::vector<Status> getStatuses();
 };
