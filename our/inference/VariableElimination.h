@@ -9,7 +9,9 @@
 #include <memory>
 
 class VariableElimination {
-    float computeStatusProbability(Graph& g, Node& n,Status& s,std::map<Node, std::vector<Node>>& factors);
+    static float computeStatusProbability(Graph& g, Node& n,Status& s,std::map<Node, std::vector<Node>>& factors);
+    static void recursiveFunction(std::vector<Node>& nodes, Node node, Status s, std::map <Node, std::vector<Node>> &factors, std::map<Node, Status> variables, float* p);
+    static float computeProbability(std::map <Node, std::vector<Node>> &factors, Status s, std::map<Node, Status> variables, Node node);
 public:
     static void inferVariableProbability(Graph& g);
 };

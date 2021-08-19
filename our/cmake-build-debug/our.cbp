@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug"/>
+				<Option working_dir="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="our">
-				<Option output="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/our.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug"/>
+				<Option output="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/our.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -32,15 +32,15 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 our"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 our"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="our/fast">
-				<Option output="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/our.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug"/>
+				<Option output="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/our.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,73 +53,73 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 our/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 our/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug"/>
+				<Option working_dir="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug"/>
+				<Option working_dir="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/Graph.cpp">
+		<Unit filename="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/graph/Graph.cpp">
 			<Option target="our"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/Graph.h">
+		<Unit filename="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/graph/Graph.h">
 			<Option target="our"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.cpp">
+		<Unit filename="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/graph/GraphElements.cpp">
 			<Option target="our"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.h">
+		<Unit filename="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/graph/GraphElements.h">
 			<Option target="our"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/inference/VariableElimination.cpp">
+		<Unit filename="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/inference/VariableElimination.cpp">
 			<Option target="our"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/inference/VariableElimination.h">
+		<Unit filename="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/inference/VariableElimination.h">
 			<Option target="our"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/main.cpp">
+		<Unit filename="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/main.cpp">
 			<Option target="our"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/BayesianNetwork.cpp">
+		<Unit filename="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/network/BayesianNetwork.cpp">
 			<Option target="our"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/BayesianNetwork.h">
+		<Unit filename="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/network/BayesianNetwork.h">
 			<Option target="our"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/reader.cpp">
+		<Unit filename="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/network/reader.cpp">
 			<Option target="our"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/reader.h">
+		<Unit filename="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/network/reader.h">
 			<Option target="our"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/probability/CPT.cpp">
+		<Unit filename="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/probability/CPT.cpp">
 			<Option target="our"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/probability/CPT.h">
+		<Unit filename="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/probability/CPT.h">
 			<Option target="our"/>
 		</Unit>
-		<Unit filename="C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/CMakeLists.txt">
+		<Unit filename="C:/Users/LucaS/OneDrive/Desktop/Universita&apos;/Programmazione di Sistema/PdS_Progetto/our/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
