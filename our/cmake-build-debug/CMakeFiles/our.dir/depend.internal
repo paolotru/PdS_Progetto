@@ -10,6 +10,12 @@ CMakeFiles/our.dir/graph/GraphElements.cpp.obj
  C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.cpp
  C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.h
  C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/probability/CPT.h
+CMakeFiles/our.dir/inference/VariableElimination.cpp.obj
+ C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/Graph.h
+ C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.h
+ C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/inference/VariableElimination.cpp
+ C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/inference/VariableElimination.h
+ C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/probability/CPT.h
 CMakeFiles/our.dir/main.cpp.obj
  C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/main.cpp
 CMakeFiles/our.dir/network/BayesianNetwork.cpp.obj
@@ -27,6 +33,5 @@ CMakeFiles/our.dir/network/reader.cpp.obj
  C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/reader.h
  C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/probability/CPT.h
 CMakeFiles/our.dir/probability/CPT.cpp.obj
- C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.h
  C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/probability/CPT.cpp
  C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/probability/CPT.h

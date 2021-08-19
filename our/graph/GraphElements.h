@@ -28,6 +28,8 @@ public:
     ~Node();
 
     std::vector<Status> getStatuses();
+
+    NodeId getId() const;
 };
 
 class Arc{

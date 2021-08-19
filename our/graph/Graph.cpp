@@ -19,5 +19,10 @@ void Graph::addArc(NodeId n1, NodeId n2) {
     //nodes.push_back(n1)
     //arcs.push_back(new Arc(n1,n2));
 }
+void Graph::addNode(const Node& n) {
+    nodes.push_back(n);
+}
+
+Graph::Graph() = default;;
 
 Graph::~Graph() = default;

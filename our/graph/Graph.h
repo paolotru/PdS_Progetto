@@ -11,9 +11,8 @@ class Graph {
     std::vector<Node> nodes;
     std::vector<Arc> arcs;
 public:
-    Graph(std::vector<Node> n,std::vector<Arc> a);
-
     Graph();
+    Graph(std::vector<Node> n,std::vector<Arc> a);
 
     virtual ~Graph();
 
@@ -23,8 +22,7 @@ public:
 
     void addArc(NodeId n1, NodeId n2);
 
-    void addNode(Node n);
-
+    void addNode(const Node& n);
 };
 
 
