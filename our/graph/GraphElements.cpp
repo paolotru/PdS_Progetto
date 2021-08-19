@@ -32,6 +32,12 @@ const std::shared_ptr<CPT> &Node::getCpt() const {
     return cpt;
 }
 
+Node::Node(std::string &name, std::vector<std::string> states, NodeId id, std::vector<std::string> probabilities) {
+    statuses=std::move(states);
+    id=id;
+
+}
+
 
 Arc::Arc(Node n1, Node n2) : source(n1),destination(n2){
 

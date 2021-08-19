@@ -17,7 +17,6 @@ private:
 //    std::map<NodeId, NodeId> m_nodeWithSameCPT;
 //    VariableNodeMap m_vnm;
     std::shared_ptr<Graph> graph;
-    //
 public:
 
     //constructor

@@ -10,6 +10,12 @@ CMakeFiles/our.dir/graph/GraphElements.cpp.obj: ../graph/GraphElements.cpp
 CMakeFiles/our.dir/graph/GraphElements.cpp.obj: ../graph/GraphElements.h
 CMakeFiles/our.dir/graph/GraphElements.cpp.obj: ../probability/CPT.h
 
+CMakeFiles/our.dir/inference/VariableElimination.cpp.obj: ../graph/Graph.h
+CMakeFiles/our.dir/inference/VariableElimination.cpp.obj: ../graph/GraphElements.h
+CMakeFiles/our.dir/inference/VariableElimination.cpp.obj: ../inference/VariableElimination.cpp
+CMakeFiles/our.dir/inference/VariableElimination.cpp.obj: ../inference/VariableElimination.h
+CMakeFiles/our.dir/inference/VariableElimination.cpp.obj: ../probability/CPT.h
+
 CMakeFiles/our.dir/main.cpp.obj: ../main.cpp
 
 CMakeFiles/our.dir/network/BayesianNetwork.cpp.obj: ../graph/Graph.h
@@ -26,7 +32,6 @@ CMakeFiles/our.dir/network/reader.cpp.obj: ../network/reader.cpp
 CMakeFiles/our.dir/network/reader.cpp.obj: ../network/reader.h
 CMakeFiles/our.dir/network/reader.cpp.obj: ../probability/CPT.h
 
-CMakeFiles/our.dir/probability/CPT.cpp.obj: ../graph/GraphElements.h
 CMakeFiles/our.dir/probability/CPT.cpp.obj: ../probability/CPT.cpp
 CMakeFiles/our.dir/probability/CPT.cpp.obj: ../probability/CPT.h
 

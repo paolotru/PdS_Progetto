@@ -15,6 +15,7 @@
 #include "base/rapidxml.hpp"
 #include "BayesianNetwork.h"
 #include "../probability/CPT.h"
+#include "GraphElements.h"
 
 using namespace rapidxml;
 
@@ -119,10 +120,11 @@ public:
 
             int numResultingStates = splitResultingStates(resultingStates, resultingStatesSplitted);
 
-            CPT cpt(varName, CPTcounter, stateNames);
-            //varname e nome in nodo, ogni nodo cpt con stati
 
-            cpt.addVariablesOrder(std::move(variablesOrder));
+            Node n(varName,stateNames,0,probDistribution);
+            //varname e nome in nodo, ogni nodo cpt con stati
+            //CPT cpt(varName, CPTcounter, stateNames);
+            //cpt.addVariablesOrder(std::move(variablesOrder));
 
             splitProbabilities(probDistribution, cpt);
 

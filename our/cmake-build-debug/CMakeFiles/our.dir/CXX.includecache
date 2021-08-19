@@ -25,11 +25,21 @@ string
 -
 memory
 -
+vector
+-
 ../probability/CPT.h
 C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/probability/CPT.h
 
-C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/main.cpp
-iostream
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/inference/VariableElimination.cpp
+VariableElimination.h
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/inference/VariableElimination.h
+
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/inference/VariableElimination.h
+../graph/Graph.h
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/Graph.h
+../graph/GraphElements.h
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.h
+memory
 -
 
 C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/BayesianNetwork.cpp
@@ -85,6 +95,4 @@ memory
 -
 map
 -
-../graph/GraphElements.h
-C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.h
 
