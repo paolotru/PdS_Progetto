@@ -116,17 +116,18 @@ public:
             splitParents(parents, variablesOrder, bn);
 
             //the conditioned variable of the CPT is added last in the variables order
-            variablesOrder.emplace_back(CPTcounter, nStates);
+           // variablesOrder.emplace_back(CPTcounter, nStates);
 
             int numResultingStates = splitResultingStates(resultingStates, resultingStatesSplitted);
 
+            std::vector<float> probabilities = splitProbabilities(probDistribution);
 
-            Node n(varName,stateNames,0,probDistribution);
+            Node n(varName,stateNames,0,probabilities,parents);
             //varname e nome in nodo, ogni nodo cpt con stati
             //CPT cpt(varName, CPTcounter, stateNames);
             //cpt.addVariablesOrder(std::move(variablesOrder));
 
-            splitProbabilities(probDistribution, cpt);
+
 
             if (numResultingStates > 0)
                 cpt.addResultingStates(std::move(resultingStatesSplitted));
@@ -175,11 +176,13 @@ private:
     int splitParents(std::string& parents, std::vector<VarStates>& variablesOrder, std::shared_ptr<BayesianNetwork<T>> bn) {
         if (parents.empty()) return 0;
         int pos;
+        std::vector<int> parentsId;
         while ((pos = parents.find(" ")) != std::string::npos) {
             std::string parent = parents.substr(0, pos);
             parents = parents.substr(pos + 1);
 
             NodeId id = bn->idFromName(parent);
+
 
             int nStates = bn->getVariableStatesNum(id);
 
@@ -196,31 +199,25 @@ private:
     }
 
     //splits the string containing the probability distribution and adds each combination of states with its probability to the CPT
-    void splitProbabilities(std::string& probDistribution, CPT<T>& cpt) {
+    std::vector<float> splitProbabilities(std::string& probDistribution) {
         int pos;
 
-        //std::vector<int> combination;
 
-        //getInitialCombination(variablesOrder, combination);
-
-        std::vector<T> probs;
+        std::vector<float> probs;
 
         while ((pos = probDistribution.find(" ")) != std::string::npos) {
-            double prob = std::stod(probDistribution.substr(0, pos));
+            float prob = std::stof(probDistribution.substr(0, pos));
             probDistribution = probDistribution.substr(pos + 1);
 
             probs.push_back(prob);
 
-            //cpt.addProbability(combination, prob);
-
-            //getNextCombination(variablesOrder, combination);
         }
 
-        double prob = std::stod(probDistribution);
+        float prob = std::stof(probDistribution);
 
         probs.push_back(prob);
 
-        cpt.addProbabilities(probs);
+        return probs;
     }
 
     //splits the string containing the resulting states into a vector of string. returns the number of states found.

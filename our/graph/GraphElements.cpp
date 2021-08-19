@@ -34,11 +34,6 @@ const std::shared_ptr<CPT> &Node::getCpt() const {
     return cpt;
 }
 
-Node::Node(std::string &name, std::vector<std::string> states, NodeId id, std::vector<std::string> probabilities) {
-    statuses=std::move(states);
-    id=id;
-
-}
 
 
 Arc::Arc(Node n1, Node n2) : source(n1),destination(n2){
@@ -58,5 +53,12 @@ Node & Arc::getDestination() {
 
 NodeId Node::getNodeId() const{
     return id;
+}
+
+Node::Node(std::string &name, std::vector<std::string> states, NodeId id, std::vector<float> probabilities, std::vector<std::string> parents) {
+    name=std::move(name);
+    id=id;
+    statuses=std::move(states);
+    cpt=std::make_shared<CPT>()
 }
 
