@@ -14,8 +14,7 @@
 
 #include "base/rapidxml.hpp"
 #include "BayesianNetwork.h"
-#include "../probability/CPT.h"
-#include "GraphElements.h"
+#include "../graph/GraphElements.h"
 
 using namespace rapidxml;
 
@@ -112,35 +111,20 @@ public:
             }
 
             nStates = stateNames.size();
-
-            splitParents(parents, variablesOrder, bn);
-
             //the conditioned variable of the CPT is added last in the variables order
-           // variablesOrder.emplace_back(CPTcounter, nStates);
-
+            // variablesOrder.emplace_back(CPTcounter, nStates);
             int numResultingStates = splitResultingStates(resultingStates, resultingStatesSplitted);
 
+            std::map<NodeId,std::vector<Status>> parentsM = splitParents(parents, bn);
             std::vector<float> probabilities = splitProbabilities(probDistribution);
 
-            Node n(varName,stateNames,0,probabilities,parents);
-            //varname e nome in nodo, ogni nodo cpt con stati
-            //CPT cpt(varName, CPTcounter, stateNames);
-            //cpt.addVariablesOrder(std::move(variablesOrder));
-
-
-
-            if (numResultingStates > 0)
-                cpt.addResultingStates(std::move(resultingStatesSplitted));
-
-            bn->addVariable(varName, cpt);
-
-            CPTcounter++;
-
+            Node n(varName,stateNames,0,probabilities,parentsM);
+            bn.addNode();
         }
 
-        bn->checkSparseCPTs();
+        bn.checkSparseCPTs();
 
-        bn->addArcsFromCPTs();
+        bn.addArcsFromCPTs();
     }
 
 private:
@@ -173,29 +157,28 @@ private:
     //}
 
     //splits the string of parents into a vector containing their id and their number of states
-    int splitParents(std::string& parents, std::vector<VarStates>& variablesOrder, std::shared_ptr<BayesianNetwork<T>> bn) {
-        if (parents.empty()) return 0;
+    std::map<NodeId,std::vector<Status>> splitParents(std::string& parents, std::shared_ptr<BayesianNetwork<T>> bn) {
         int pos;
-        std::vector<int> parentsId;
+        NodeId parentId;
+        std::vector<Status> parent_states;
+        std::map<NodeId,std::vector<Status>> parentsM;
+        if (parents.empty())
+            return parentsM;
         while ((pos = parents.find(" ")) != std::string::npos) {
             std::string parent = parents.substr(0, pos);
             parents = parents.substr(pos + 1);
 
-            NodeId id = bn->idFromName(parent);
-
-
-            int nStates = bn->getVariableStatesNum(id);
-
-            variablesOrder.emplace_back(id, nStates);
+            parentId=bn->idFromName(parent);
+            //parent_states GET
+            //parentsM[parentId]=parent_states;
+            parentsM.insert(std::pair<NodeId,std::vector<Status>>(parentId,parent_states));
         }
 
-        NodeId id = bn->idFromName(parents);
+        parentId=bn->idFromName(parents);
+        //parent_states GET
+        parentsM.insert(std::pair<NodeId,std::vector<Status>>(parentId,parent_states));
 
-        int nStates = bn->getVariableStatesNum(id);
-
-        variablesOrder.emplace_back(id, nStates);
-
-        return variablesOrder.size();
+        return parentsM;
     }
 
     //splits the string containing the probability distribution and adds each combination of states with its probability to the CPT

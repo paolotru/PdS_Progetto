@@ -55,10 +55,10 @@ NodeId Node::getNodeId() const{
     return id;
 }
 
-Node::Node(std::string &name, std::vector<std::string> states, NodeId id, std::vector<float> probabilities, std::vector<std::string> parents) {
+Node::Node(std::string &name, std::vector<Status> states, NodeId id, std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> parents) {
     name=std::move(name);
     id=id;
     statuses=std::move(states);
-    cpt=std::make_shared<CPT>()
+    cpt=std::make_shared<CPT>(new CPT(probabilities,parents,states));
 }
 

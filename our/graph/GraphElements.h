@@ -21,7 +21,7 @@ public:
     bool operator!=(const Node &rhs) const;
 
     Node(std::string& name,NodeId id,int ns);
-    Node(std::string& name,std::vector<std::string> states,NodeId id,std::vector<float> probabilities,std::vector<std::string> parents);
+    Node(std::string& name,std::vector<Status> states,NodeId id,std::vector<float> probabilities,std::map<NodeId,std::vector<Status>> parents);
 
     Node(const Node& n);
 

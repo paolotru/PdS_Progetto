@@ -67,9 +67,6 @@ private:
     bool hasDependence;
     std::vector<ConditionalProbability> cpt_table;
 public:
-    CPT(){
-        hasDependence = false;
-    }
     std::vector<ConditionalProbability> getCPTTable(){
         return this->cpt_table;
     }
@@ -80,6 +77,8 @@ public:
     void addProbability(ConditionalProbability p){
         cpt_table.push_back(p);
     }
+
+    CPT(std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> parents,std::vector<Status> states);
 };
 
 
