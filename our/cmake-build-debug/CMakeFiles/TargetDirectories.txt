@@ -1,3 +1,3 @@
-C:/Users/LucaS/OneDrive/Desktop/Universita'/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/CMakeFiles/our.dir
-C:/Users/LucaS/OneDrive/Desktop/Universita'/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/LucaS/OneDrive/Desktop/Universita'/Programmazione di Sistema/PdS_Progetto/our/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/CMakeFiles/our.dir
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -14,8 +14,6 @@ Node::Node(const Node &n) {
     n_states=n.n_states;
 }
 
-Node::Node(){};
-
 Node::~Node() = default;
 
 bool Node::operator==(const Node &rhs) const {
@@ -51,9 +49,6 @@ Node & Arc::getDestination() {
     return destination;
 }
 
-NodeId Node::getNodeId() const{
-    return id;
-}
 
 Node::Node(std::string &name, std::vector<Status> states, NodeId id, std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> parents) {
     name=std::move(name);
