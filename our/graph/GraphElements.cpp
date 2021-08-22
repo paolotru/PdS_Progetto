@@ -52,9 +52,10 @@ Node & Arc::getDestination() {
 
 Node::Node(std::string &name, std::vector<Status> states, NodeId id, std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> parents) {
     name=std::move(name);
-    id=id;
+    this->id=id;
+    n_states=states.size();
     statuses=std::move(states);
-    cpt=std::make_shared<CPT>(new CPT(probabilities,parents,states));
+    cpt=std::make_shared<CPT>(CPT(probabilities,parents,states));
 }
 
 NodeId Node::getId() const {

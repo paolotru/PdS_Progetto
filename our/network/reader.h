@@ -110,10 +110,10 @@ public:
 
             }
 
-            nStates = stateNames.size();
+            //nStates = stateNames.size();
             //the conditioned variable of the CPT is added last in the variables order
             // variablesOrder.emplace_back(CPTcounter, nStates);
-            int numResultingStates = splitResultingStates(resultingStates, resultingStatesSplitted);
+            //int numResultingStates = splitResultingStates(resultingStates, resultingStatesSplitted);
 
             std::map<NodeId,std::vector<Status>> parentsM = splitParents(parents, bn);
             std::vector<float> probabilities = splitProbabilities(probDistribution);
@@ -122,9 +122,9 @@ public:
             bn.addNode();
         }
 
-        bn.checkSparseCPTs();
-
-        bn.addArcsFromCPTs();
+//        bn.checkSparseCPTs();
+//
+//        bn.addArcsFromCPTs();
     }
 
 private:
@@ -205,20 +205,20 @@ private:
 
     //splits the string containing the resulting states into a vector of string. returns the number of states found.
     //used for deterministic variables
-    int splitResultingStates(std::string& resultingStates, std::vector<std::string>& resultingStatesSplitted) {
-        if (resultingStates.empty()) return 0;
-        int pos;
-        while ((pos = resultingStates.find(" ")) != std::string::npos) {
-            std::string state = resultingStates.substr(0, pos);
-            resultingStates = resultingStates.substr(pos + 1);
-
-            resultingStatesSplitted.push_back(state);
-        }
-
-        resultingStatesSplitted.push_back(resultingStates);
-
-        return resultingStatesSplitted.size();
-    }
+//    int splitResultingStates(std::string& resultingStates, std::vector<std::string>& resultingStatesSplitted) {
+//        if (resultingStates.empty()) return 0;
+//        int pos;
+//        while ((pos = resultingStates.find(" ")) != std::string::npos) {
+//            std::string state = resultingStates.substr(0, pos);
+//            resultingStates = resultingStates.substr(pos + 1);
+//
+//            resultingStatesSplitted.push_back(state);
+//        }
+//
+//        resultingStatesSplitted.push_back(resultingStates);
+//
+//        return resultingStatesSplitted.size();
+//    }
 };
 
 

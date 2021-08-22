@@ -1,6 +1,7 @@
 #ifndef OUR_CPT_H
 #define OUR_CPT_H
 #include <string>
+#include <utility>
 #include <vector>
 #include <memory>
 #include <map>
@@ -13,6 +14,8 @@ private:
     std::map<NodeId, Status> parents;
     Status status;
 public:
+    VariableInformations(std::map<NodeId, Status> parents, Status status);
+
     Status getStatus(){
         return status;
     }
@@ -26,10 +29,11 @@ private:
     std::shared_ptr<VariableInformations> v_info;
     float probability;
 public:
+    ConditionalProbability(std::shared_ptr<VariableInformations> vInfo, float probability);
+
     std::shared_ptr<VariableInformations> getVariableInfo(){
         return v_info;
     }
-
     float getProbability(){
         return probability;
     };
