@@ -6,9 +6,11 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.cpp
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/Graph.h
 GraphElements.h
 C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.h
+vector
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/vector
 
 C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.h
 string
@@ -19,6 +21,48 @@ vector
 -
 ../probability/CPT.h
 C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/probability/CPT.h
+
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/main.cpp
+iostream
+-
+network/reader.h
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/reader.h
+
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/BayesianNetwork.cpp
+BayesianNetwork.h
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/BayesianNetwork.h
+
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/BayesianNetwork.h
+../graph/Graph.h
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/Graph.h
+
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/base/rapidxml.hpp
+cstdlib
+-
+cassert
+-
+new
+-
+exception
+-
+
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/reader.cpp
+reader.h
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/reader.h
+
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/reader.h
+string
+-
+fstream
+-
+sstream
+-
+base/rapidxml.hpp
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/base/rapidxml.hpp
+BayesianNetwork.h
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/BayesianNetwork.h
+../graph/GraphElements.h
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.h
 
 C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/probability/CPT.h
 string

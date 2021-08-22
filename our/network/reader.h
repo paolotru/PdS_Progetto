@@ -16,12 +16,13 @@
 #include "BayesianNetwork.h"
 #include "../graph/GraphElements.h"
 
+typedef float T;
 using namespace rapidxml;
 
 //reader class for bayesian network stored in .xdsl files
 //the template parameter is used to define the precision of the probability red from the file
 
-template <class T = float>
+
 class BNReader {
 public:
     BNReader() = default;;
@@ -119,7 +120,7 @@ public:
             std::vector<float> probabilities = splitProbabilities(probDistribution);
 
             Node n(varName,stateNames,0,probabilities,parentsM);
-            bn.addNode();
+            bn->addNode(n);
         }
 
 //        bn.checkSparseCPTs();
@@ -169,13 +170,12 @@ private:
             parents = parents.substr(pos + 1);
 
             parentId=bn->idFromName(parent);
-            //parent_states GET
-            //parentsM[parentId]=parent_states;
+            parent_states=bn->getStatesById(parentId);
             parentsM.insert(std::pair<NodeId,std::vector<Status>>(parentId,parent_states));
         }
 
         parentId=bn->idFromName(parents);
-        //parent_states GET
+        parent_states=bn->getStatesById(parentId);
         parentsM.insert(std::pair<NodeId,std::vector<Status>>(parentId,parent_states));
 
         return parentsM;

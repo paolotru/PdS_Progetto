@@ -4,8 +4,8 @@
 int main() {
     auto bn = std::make_shared<BayesianNetwork<float>>();
 
-    BNReader<float> reader;
+    BNReader reader;
 
-    reader.loadNetworkFromFile("..\\..\\..\\..\\Bayesian Network\\exampleNetworks\\barley.xdsl", bn);
+    reader.loadNetworkFromFile(".\\exampleNetworks\\prova_1.xdsl", bn);
     return 0;
 }

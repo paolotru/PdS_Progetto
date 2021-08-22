@@ -16,7 +16,13 @@ CMakeFiles/our.dir/inference/VariableElimination.cpp.obj: ../inference/VariableE
 CMakeFiles/our.dir/inference/VariableElimination.cpp.obj: ../inference/VariableElimination.h
 CMakeFiles/our.dir/inference/VariableElimination.cpp.obj: ../probability/CPT.h
 
+CMakeFiles/our.dir/main.cpp.obj: ../graph/Graph.h
+CMakeFiles/our.dir/main.cpp.obj: ../graph/GraphElements.h
 CMakeFiles/our.dir/main.cpp.obj: ../main.cpp
+CMakeFiles/our.dir/main.cpp.obj: ../network/BayesianNetwork.h
+CMakeFiles/our.dir/main.cpp.obj: ../network/base/rapidxml.hpp
+CMakeFiles/our.dir/main.cpp.obj: ../network/reader.h
+CMakeFiles/our.dir/main.cpp.obj: ../probability/CPT.h
 
 CMakeFiles/our.dir/network/BayesianNetwork.cpp.obj: ../graph/Graph.h
 CMakeFiles/our.dir/network/BayesianNetwork.cpp.obj: ../graph/GraphElements.h

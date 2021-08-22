@@ -62,3 +62,23 @@ NodeId Node::getId() const {
     return id;
 }
 
+bool Node::operator<(const Node &rhs) const {
+    return id < rhs.id;
+}
+
+bool Node::operator>(const Node &rhs) const {
+    return rhs < *this;
+}
+
+bool Node::operator<=(const Node &rhs) const {
+    return !(rhs < *this);
+}
+
+bool Node::operator>=(const Node &rhs) const {
+    return !(*this < rhs);
+}
+
+std::string Node::getName() {
+    return name;
+}
+

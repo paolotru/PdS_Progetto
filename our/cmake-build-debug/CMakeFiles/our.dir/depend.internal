@@ -17,7 +17,13 @@ CMakeFiles/our.dir/inference/VariableElimination.cpp.obj
  C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/inference/VariableElimination.h
  C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/probability/CPT.h
 CMakeFiles/our.dir/main.cpp.obj
+ C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/Graph.h
+ C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.h
  C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/main.cpp
+ C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/BayesianNetwork.h
+ C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/base/rapidxml.hpp
+ C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/reader.h
+ C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/probability/CPT.h
 CMakeFiles/our.dir/network/BayesianNetwork.cpp.obj
  C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/Graph.h
  C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.h

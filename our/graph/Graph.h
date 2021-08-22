@@ -8,15 +8,18 @@
 
 
 class Graph {
-    std::vector<Node> nodes;
+    //std::vector<Node> nodes;
+    std::map<NodeId,Node> nodes;
     std::vector<Arc> arcs;
 public:
     Graph();
-    Graph(std::vector<Node> n,std::vector<Arc> a);
+    Graph(std::map<NodeId, Node> n, std::vector<Arc> a);
 
     virtual ~Graph();
 
     std::vector<Node> getNodes();
+
+    Node getNodeById(NodeId id);
 
     std::vector<Arc> getArcs();
 

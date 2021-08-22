@@ -30,6 +30,16 @@ public:
     std::vector<Status> getStatuses();
 
     NodeId getId() const;
+
+    std::string getName();
+
+    bool operator<(const Node &rhs) const;
+
+    bool operator>(const Node &rhs) const;
+
+    bool operator<=(const Node &rhs) const;
+
+    bool operator>=(const Node &rhs) const;
 };
 
 class Arc{

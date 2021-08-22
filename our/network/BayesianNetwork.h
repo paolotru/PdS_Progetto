@@ -15,6 +15,8 @@ private:
 //    std::map<NodeId, NodeId> m_nodeWithSameCPT;
 //    VariableNodeMap m_vnm;
     std::shared_ptr<Graph> graph;
+    std::map<std::string, Node> nodeMap;
+
 public:
     //constructor
     BayesianNetwork() : graph(std::make_shared<Graph>()) {
@@ -46,7 +48,18 @@ public:
             return false;
     }
     void addNode(Node n){
+        nodeMap.insert(std::pair<std::string,Node>(n.getName(),n));  //TODO Make shared?
         graph->addNode(n);
+    }
+    NodeId idFromName(const std::string& variableName) {
+        auto x=nodeMap.find(variableName);
+        if(x !=nodeMap.end())
+            return x->second.getId();
+        else
+            return -1;
+    }
+    std::vector<Status> getStatesById(NodeId parent){
+        return graph->getNodeById(parent).getStatuses();
     }
     //adds and arc to the graph
 //    void addArc(NodeId node1, NodeId node2) {
@@ -134,9 +147,7 @@ public:
 //    }
 //
 //    //returns the id of a variable given its name
-//    NodeId idFromName(const std::string& variableName) {
-//        return m_vnm.idFromName(variableName);
-//    }
+
 //
 //
 //    //wrapper function that removes a node from the DAG
