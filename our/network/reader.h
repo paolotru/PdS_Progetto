@@ -116,7 +116,8 @@ public:
 
             std::map<NodeId,std::vector<Status>> parentsM = splitParents(parents, bn);
             std::vector<float> probabilities = splitProbabilities(probDistribution);
-
+            for(auto it = probabilities.begin(); it != probabilities.end(); it++)
+                std::cout << *it << std::endl;
 //            std::cout << "splitparents: " << std::endl;
 //            std::cout << "splitparents size: "<<parentsM.size() << std::endl;
 //            for(auto it = parentsM.begin(); it != parentsM.end(); it++)
@@ -191,14 +192,11 @@ private:
     //splits the string containing the probability distribution and adds each combination of states with its probability to the CPT
     std::vector<float> splitProbabilities(std::string& probDistribution) {
         int pos;
-
-
         std::vector<float> probs;
 
         while ((pos = probDistribution.find(" ")) != std::string::npos) {
             float prob = std::stof(probDistribution.substr(0, pos));
             probDistribution = probDistribution.substr(pos + 1);
-
             probs.push_back(prob);
 
         }

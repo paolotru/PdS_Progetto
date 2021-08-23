@@ -55,7 +55,7 @@ Node::Node(std::string &name, std::vector<Status> states, NodeId id, std::vector
     this->id=id;
     n_states=states.size();
     statuses=std::move(states);
-    cpt=std::make_shared<CPT>(CPT(probabilities,parents,states));
+    this->cpt=std::make_shared<CPT>(probabilities,parents,states);
 }
 
 NodeId Node::getId() const {
