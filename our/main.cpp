@@ -15,7 +15,8 @@ int main() {
 
     for(auto it = n.begin(); it != n.end(); it++){
         std::cout << "NODE " << it->getId() << std::endl;
-        it->getCpt()->printCPT();
+        auto c = it->getCpt();
+        c->printCPT();
     }
 
     return 0;

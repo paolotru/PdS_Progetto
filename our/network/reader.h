@@ -116,8 +116,7 @@ public:
 
             std::map<NodeId,std::vector<Status>> parentsM = splitParents(parents, bn);
             std::vector<float> probabilities = splitProbabilities(probDistribution);
-            for(auto it = probabilities.begin(); it != probabilities.end(); it++)
-                std::cout << *it << std::endl;
+
 //            std::cout << "splitparents: " << std::endl;
 //            std::cout << "splitparents size: "<<parentsM.size() << std::endl;
 //            for(auto it = parentsM.begin(); it != parentsM.end(); it++)

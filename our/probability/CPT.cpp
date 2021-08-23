@@ -7,12 +7,15 @@
 #include <utility>
 
 CPT::CPT(std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> parents,std::vector<Status> states) {
+
     if(parents.empty()) {
+        std::cout << states.size() << std::endl;
         hasDependence = false;
         std::map<NodeId,Status> m;
         for (int i = 0;i<states.size();i++) {
             std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(m,states[i]);
             cpt_table.emplace_back(ConditionalProbability(vi_p,probabilities[i]));
+            std::cout << cpt_table.size() << std::endl;
         }
     }else{
         hasDependence=true;
