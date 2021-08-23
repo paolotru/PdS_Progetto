@@ -11,6 +11,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+#include <iostream>
 
 #include "base/rapidxml.hpp"
 #include "BayesianNetwork.h"
@@ -119,6 +120,12 @@ public:
             std::map<NodeId,std::vector<Status>> parentsM = splitParents(parents, bn);
             std::vector<float> probabilities = splitProbabilities(probDistribution);
 
+            std::cout << "varName: " << varName << std::endl;
+            for(auto it = parentsM.begin(); it != parentsM.end(); it++){
+                std::cout << it->first << std::endl;
+            }
+            std::cout << "parents: " << parents << std::endl;
+            std::cout << "statenames: " << stateNames.begin().base() << std::endl;
             Node n(varName,stateNames,0,probabilities,parentsM);
             bn->addNode(n);
         }
