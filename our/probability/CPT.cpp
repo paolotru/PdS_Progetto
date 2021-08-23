@@ -11,7 +11,7 @@ CPT::CPT(std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> 
         hasDependence = false;
         std::map<NodeId,Status> m;
         for (int i = 0;i<states.size();i++) {
-            std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(VariableInformations(m,states[i]));
+            std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(m,states[i]);
             cpt_table.emplace_back(ConditionalProbability(vi_p,probabilities[i]));
         }
     }else{
@@ -29,8 +29,7 @@ CPT::CPT(std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> 
                 map[parentsId[i]]=(parentsStatuses[i])[k];          //TODO: make shared?
 
                 for (int j = 0; j < states.size(); ++j) {
-                    VariableInformations vi = VariableInformations(map, states[i]);
-                    std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(vi);
+                    std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(map, states[i]);
                     cpt_table.emplace_back(ConditionalProbability(vi_p, probabilities[i]));
                 }
             }
