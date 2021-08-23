@@ -111,23 +111,26 @@ public:
                 //}
 
             }
-
-            //nStates = stateNames.size();
-            //the conditioned variable of the CPT is added last in the variables order
-            // variablesOrder.emplace_back(CPTcounter, nStates);
-            //int numResultingStates = splitResultingStates(resultingStates, resultingStatesSplitted);
+//            std::cout << "varName: " << varName << std::endl;
+//            std::cout << "parents: " << parents << std::endl;
 
             std::map<NodeId,std::vector<Status>> parentsM = splitParents(parents, bn);
             std::vector<float> probabilities = splitProbabilities(probDistribution);
 
-            std::cout << "varName: " << varName << std::endl;
-            for(auto it = parentsM.begin(); it != parentsM.end(); it++){
-                std::cout << it->first << std::endl;
-            }
-            std::cout << "parents: " << parents << std::endl;
-            std::cout << "statenames: " << stateNames.begin().base() << std::endl;
+//            std::cout << "splitparents: " << std::endl;
+//            std::cout << "splitparents size: "<<parentsM.size() << std::endl;
+//            for(auto it = parentsM.begin(); it != parentsM.end(); it++)
+//                std::cout << it->first << std::endl;
+
             Node n(varName,stateNames,0,probabilities,parentsM);
             bn->addNode(n);
+            if(!parentsM.empty()){
+                std::vector<NodeId> parentsId;
+                for(auto &p : parentsM)
+                    parentsId.push_back(p.first);
+                bn->addArcs(n,parentsId);
+            }
+
         }
 
 //        bn.checkSparseCPTs();
@@ -175,16 +178,13 @@ private:
         while ((pos = parents.find(" ")) != std::string::npos) {
             std::string parent = parents.substr(0, pos);
             parents = parents.substr(pos + 1);
-
             parentId=bn->idFromName(parent);
             parent_states=bn->getStatesById(parentId);
             parentsM.insert(std::pair<NodeId,std::vector<Status>>(parentId,parent_states));
         }
-
         parentId=bn->idFromName(parents);
         parent_states=bn->getStatesById(parentId);
         parentsM.insert(std::pair<NodeId,std::vector<Status>>(parentId,parent_states));
-
         return parentsM;
     }
 

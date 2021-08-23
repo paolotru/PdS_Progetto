@@ -23,7 +23,7 @@ public:
 
     std::vector<Arc> getArcs();
 
-    void addArc(NodeId n1, NodeId n2);
+    void addArc(const Arc& a);
 
     void addNode(const Node& n);
 };

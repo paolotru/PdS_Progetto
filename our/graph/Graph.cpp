@@ -21,9 +21,8 @@ Graph::Graph(std::map<NodeId , Node> n, std::vector<Arc> a) {
     arcs=std::move(a);
 }
 
-void Graph::addArc(NodeId n1, NodeId n2) {
-    //nodes.push_back(n1)
-    //arcs.push_back(new Arc(n1,n2));
+void Graph::addArc(const Arc& a) {
+    arcs.push_back(a);
 }
 void Graph::addNode(const Node& n) {
     //nodes.push_back(n);

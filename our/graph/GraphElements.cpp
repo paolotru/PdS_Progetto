@@ -51,7 +51,7 @@ Node & Arc::getDestination() {
 
 
 Node::Node(std::string &name, std::vector<Status> states, NodeId id, std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> parents) {
-    name=std::move(name);
+    this->name=std::move(name);
     this->id=id;
     n_states=states.size();
     statuses=std::move(states);
@@ -80,5 +80,9 @@ bool Node::operator>=(const Node &rhs) const {
 
 std::string Node::getName() {
     return name;
+}
+
+void Node::setId(NodeId id) {
+    Node::id = id;
 }
 

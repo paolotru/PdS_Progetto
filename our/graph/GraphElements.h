@@ -40,6 +40,8 @@ public:
     bool operator<=(const Node &rhs) const;
 
     bool operator>=(const Node &rhs) const;
+
+    void setId(NodeId id);
 };
 
 class Arc{

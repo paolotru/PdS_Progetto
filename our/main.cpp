@@ -7,7 +7,7 @@ int main() {
     BNReader reader;
 
     reader.loadNetworkFromFile("..\\exampleNetworks\\prova_1.xdsl", bn);
-    std::cout << bn->getNodeMap().begin()->first << std::endl;
-    std::cout << bn->getGraph()->getArcs().size() << std::endl;
+    std::cout <<"Nodi letti: " <<bn->getNodeMap().size() <<std::endl;
+    std::cout <<"Archi letti: "  << bn->getGraph()->getArcs().size() << std::endl;
     return 0;
 }

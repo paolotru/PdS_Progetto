@@ -14,6 +14,7 @@ private:
 //    CPTs<T> m_cpt;
 //    std::map<NodeId, NodeId> m_nodeWithSameCPT;
 //    VariableNodeMap m_vnm;
+    NodeId counter = 0;
     std::shared_ptr<Graph> graph;
     std::map<std::string, Node> nodeMap;
 
@@ -56,6 +57,8 @@ public:
             return false;
     }
     void addNode(Node n){
+        n.setId(counter);
+        counter++;
         nodeMap.insert(std::pair<std::string,Node>(n.getName(),n));  //TODO Make shared?
         graph->addNode(n);
     }
@@ -68,6 +71,10 @@ public:
     }
     std::vector<Status> getStatesById(NodeId parent){
         return graph->getNodeById(parent).getStatuses();
+    }
+    void addArcs(Node n,std::vector<NodeId> parentsId){
+        for (auto &pId : parentsId)
+            graph->addArc(Arc(graph->getNodeById(pId),n));
     }
     //adds and arc to the graph
 //    void addArc(NodeId node1, NodeId node2) {

@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/Graph.cpp
+Graph.h
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/Graph.h
+utility
+-
+
 C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/Graph.h
 GraphElements.h
 C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/GraphElements.h
@@ -22,11 +28,25 @@ vector
 ../probability/CPT.h
 C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/probability/CPT.h
 
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/inference/VariableElimination.cpp
+VariableElimination.h
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/inference/VariableElimination.h
+
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/inference/VariableElimination.h
+../graph/Graph.h
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/graph/Graph.h
+memory
+-
+
 C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/main.cpp
 iostream
 -
 network/reader.h
 C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/reader.h
+
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/BayesianNetwork.cpp
+BayesianNetwork.h
+C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/BayesianNetwork.h
 
 C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/BayesianNetwork.h
 ../graph/Graph.h
@@ -52,6 +72,8 @@ string
 fstream
 -
 sstream
+-
+iostream
 -
 base/rapidxml.hpp
 C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/network/base/rapidxml.hpp
