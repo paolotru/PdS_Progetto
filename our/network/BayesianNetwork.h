@@ -40,6 +40,14 @@ public:
         return *this;
     }
 
+    std::map<std::string, Node> getNodeMap(){
+        return nodeMap;
+    };
+
+    std::shared_ptr<Graph> getGraph(){
+        return graph;
+    }
+
     //boolean operator
     bool operator==(const BayesianNetwork& bn) const {
         if (*bn == *(bn.graph))
