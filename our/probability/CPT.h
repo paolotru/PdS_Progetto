@@ -5,6 +5,7 @@
 #include <vector>
 #include <memory>
 #include <map>
+#include <iostream>
 
 typedef int NodeId;
 typedef std::string Status;
@@ -74,6 +75,13 @@ public:
     }
 
     CPT(std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> parents,std::vector<Status> states);
+
+    CPT(): hasDependence(false){};
+
+    void printCPT(){
+        for(auto& tp : cpt_table)
+            std::cout << "PROB " << tp.getProbability() <<std::endl;
+    }
 };
 
 

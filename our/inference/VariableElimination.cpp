@@ -3,7 +3,7 @@
 //
 #include "VariableElimination.h"
 
-void VariableElimination::inferVariableProbability(Graph& g){
+Graph VariableElimination::inferVariableProbability(Graph& g){
 
     std::vector<Arc> arcs = g.getArcs();
     std::vector<Node> nodes = g.getNodes();
@@ -45,6 +45,8 @@ void VariableElimination::inferVariableProbability(Graph& g){
 
         }
     }
+
+    return output;
 }
 
 float VariableElimination::computeStatusProbability(Graph &g, Node &node, Status &s,

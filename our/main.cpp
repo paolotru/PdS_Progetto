@@ -9,5 +9,14 @@ int main() {
     reader.loadNetworkFromFile("..\\exampleNetworks\\prova_1.xdsl", bn);
     std::cout <<"Nodi letti: " <<bn->getNodeMap().size() <<std::endl;
     std::cout <<"Archi letti: "  << bn->getGraph()->getArcs().size() << std::endl;
+
+    auto g = bn->getGraph();
+    auto n = g->getNodes();
+
+    for(auto it = n.begin(); it != n.end(); it++){
+        std::cout << "NODE " << it->getId() << std::endl;
+        it->getCpt()->printCPT();
+    }
+
     return 0;
 }
