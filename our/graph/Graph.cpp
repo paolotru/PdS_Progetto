@@ -13,7 +13,6 @@ std::vector<Node> Graph::getNodes() {
     for(auto& n : nodes)
         v.push_back(n.second);
     return v;
-    //return this->nodes;
 }
 
 Graph::Graph(std::map<NodeId , Node> n, std::vector<Arc> a) {

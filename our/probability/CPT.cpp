@@ -7,7 +7,6 @@
 #include <utility>
 
 CPT::CPT(std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> parents,std::vector<Status> states) {
-
     if(parents.empty()) {
         std::cout << states.size() << std::endl;
         hasDependence = false;

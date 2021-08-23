@@ -13,11 +13,11 @@ int main() {
     auto g = bn->getGraph();
     auto n = g->getNodes();
 
-    for(auto it = n.begin(); it != n.end(); it++){
-        std::cout << "NODE " << it->getId() << std::endl;
-        auto c = it->getCpt();
-        c->printCPT();
-    }
+//    for(auto it = n.begin(); it != n.end(); it++){
+//        std::cout << "NODE " << it->getId() << std::endl;
+//        auto c = it->getCpt();
+//        c->printCPT();
+//    }
 
     return 0;
 }

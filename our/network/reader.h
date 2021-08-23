@@ -113,7 +113,9 @@ public:
             }
 //            std::cout << "varName: " << varName << std::endl;
 //            std::cout << "parents: " << parents << std::endl;
-
+//            for (auto &s : stateNames) {
+//                std::cout<<s<<std::endl;
+//            }
             std::map<NodeId,std::vector<Status>> parentsM = splitParents(parents, bn);
             std::vector<float> probabilities = splitProbabilities(probDistribution);
 
