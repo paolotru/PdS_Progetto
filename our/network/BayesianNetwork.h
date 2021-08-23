@@ -56,10 +56,11 @@ public:
         else
             return false;
     }
-    void addNode(Node n){
+    void addNode(Node& n){
         n.setId(counter);
         counter++;
         nodeMap.insert(std::pair<std::string,Node>(n.getName(),n));  //TODO Make shared?
+        std::cout << "SONO IN ADD NODE DI BN " << n.getStatuses().size() << std::endl;
         graph->addNode(n);
     }
     NodeId idFromName(const std::string& variableName) {

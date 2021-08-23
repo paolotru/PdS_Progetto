@@ -25,7 +25,7 @@ public:
 
     void addArc(const Arc& a);
 
-    void addNode(const Node& n);
+    void addNode(Node& n);
 };
 
 
