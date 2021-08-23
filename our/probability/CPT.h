@@ -16,13 +16,17 @@ private:
     Status status;
 public:
     VariableInformations(std::map<NodeId, Status> parents, Status status);
-
+    VariableInformations(const VariableInformations& vi);
     Status getStatus(){
         return status;
     }
     std::map<NodeId, Status> getParents(){
         return parents;
     }
+
+    bool operator==(const VariableInformations &rhs) const;
+
+    bool operator!=(const VariableInformations &rhs) const;
 };
 
 class ConditionalProbability{
@@ -31,6 +35,7 @@ private:
     float probability;
 public:
     ConditionalProbability(std::shared_ptr<VariableInformations> vInfo, float probability);
+    ConditionalProbability(const ConditionalProbability& cp);
 
     std::shared_ptr<VariableInformations> getVariableInfo(){
         return v_info;
@@ -78,9 +83,11 @@ public:
 
     CPT(): hasDependence(false){};
 
-    void printCPT(){
-        for(auto& tp : cpt_table)
-            std::cout << "PROB " << tp.getProbability() <<std::endl;
+    void printCPT() {
+        for (auto &tp : cpt_table) {
+            std::cout << "Status: " << tp.getVariableInfo()->getStatus() << std::endl;
+            std::cout << "PROB " << tp.getProbability() << std::endl;
+        }
     }
 };
 

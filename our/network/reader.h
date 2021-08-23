@@ -125,8 +125,6 @@ public:
 //                std::cout << it->first << std::endl;
 
             Node n(varName,stateNames,-1,probabilities,parentsM);
-            std::cout << n.getName() << std::endl;
-            std::cout << n.getStatuses().size() << std::endl;
             bn->addNode(n);
             if(!parentsM.empty()){
                 std::vector<NodeId> parentsId;

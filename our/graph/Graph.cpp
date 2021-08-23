@@ -24,10 +24,7 @@ void Graph::addArc(const Arc& a) {
     arcs.push_back(a);
 }
 void Graph::addNode(Node& n) {
-    //nodes.push_back(n);
-    nodes.insert(std::pair<NodeId,Node>(n.getId(),n));
-
-    std::cout << "SONO IN ADD NODE DI GRAPHH " << n.getStatuses().size() << std::endl;
+    nodes.emplace(n.getId(),n);
 }
 
 Node Graph::getNodeById(NodeId id) {

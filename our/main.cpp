@@ -14,7 +14,7 @@ int main() {
     auto n = g->getNodes();
 
    for(auto it = n.begin(); it != n.end(); it++){
-        std::cout << "NODE " << it->getId() << std::endl;
+        std::cout << "\nNODE " << it->getId() << std::endl;
         auto c = it->getCpt();
         c->printCPT();
    }

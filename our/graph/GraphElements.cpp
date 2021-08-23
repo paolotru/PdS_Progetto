@@ -12,6 +12,8 @@ Node::Node(const Node &n) {
     name=n.name;
     id=n.id;
     n_states=n.n_states;
+    statuses=n.statuses;
+    cpt=n.cpt;
 }
 
 Node::~Node() = default;
@@ -25,7 +27,7 @@ bool Node::operator!=(const Node &rhs) const {
 }
 
 std::vector<Status> Node::getStatuses() {
-    return statuses;
+    return this->statuses;
 }
 
 const std::shared_ptr<CPT> &Node::getCpt() const {
@@ -54,7 +56,6 @@ Node::Node(std::string &name, std::vector<Status> states, NodeId id, std::vector
     this->name=std::move(name);
     this->id=id;
     this->n_states=states.size();
-
     this->cpt=std::make_shared<CPT>(probabilities,parents,states);
     this->statuses=states;
 }

@@ -4,17 +4,15 @@
 
 #include "CPT.h"
 
-#include <utility>
 
 CPT::CPT(std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> parents, std::vector<Status> states) {
     if(parents.empty()) {
-        std::cout << "STATES " << states.size() << std::endl;
         hasDependence = false;
         std::map<NodeId,Status> m;
         for (int i = 0;i<states.size();i++) {
             std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(m,states[i]);
-            cpt_table.emplace_back(ConditionalProbability(vi_p,probabilities[i]));
-            std::cout << cpt_table.size() << std::endl;
+            ConditionalProbability cp(vi_p,probabilities[i]);
+            cpt_table.emplace_back(cp);
         }
     }else{
         hasDependence=true;
@@ -24,6 +22,7 @@ CPT::CPT(std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> 
             parentsId.push_back(parent.first);
             parentsStatuses.push_back(parent.second);
         }
+        int c=0;
         for (int i = 0; i < parents.size(); i++) {
 
             for (int k = 0; k < parentsStatuses[i].size(); ++k) {
@@ -32,7 +31,7 @@ CPT::CPT(std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> 
 
                 for (int j = 0; j < states.size(); ++j) {
                     std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(map, states[i]);
-                    cpt_table.emplace_back(ConditionalProbability(vi_p, probabilities[i]));
+                    cpt_table.emplace_back(ConditionalProbability(vi_p, probabilities[c++]));
                 }
             }
         }
@@ -40,9 +39,28 @@ CPT::CPT(std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> 
 }
 
 VariableInformations::VariableInformations(std::map<NodeId, Status> parents, Status status) {
-    parents=std::move(parents);
-    status=std::move(status);
+    this->parents=std::move(parents);
+    this->status=std::move(status);
+}
+
+VariableInformations::VariableInformations(const VariableInformations& vi) {
+    parents=vi.parents;
+    status=vi.status;
+}
+
+bool VariableInformations::operator==(const VariableInformations &rhs) const {
+    return parents == rhs.parents &&
+           status == rhs.status;
+}
+
+bool VariableInformations::operator!=(const VariableInformations &rhs) const {
+    return !(rhs == *this);
 }
 
 ConditionalProbability::ConditionalProbability(std::shared_ptr<VariableInformations> vInfo, float probability)
         : v_info(std::move(vInfo)), probability(probability) {}
+
+ConditionalProbability::ConditionalProbability(const ConditionalProbability& cp) {
+    probability=cp.probability;
+    v_info=cp.v_info;
+}
