@@ -121,8 +121,6 @@ public:
 
 //            std::cout << "splitparents: " << std::endl;
 //            std::cout << "splitparents size: "<<parentsM.size() << std::endl;
-//            for(auto it = parentsM.begin(); it != parentsM.end(); it++)
-//                std::cout << it->first << std::endl;
 
             Node n(varName,stateNames,-1,probabilities,parentsM);
             bn->addNode(n);

@@ -30,7 +30,7 @@ CPT::CPT(std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> 
                 map[parentsId[i]]=(parentsStatuses[i])[k];          //TODO: make shared?
 
                 for (int j = 0; j < states.size(); ++j) {
-                    std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(map, states[i]);
+                    std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(map, states[j]);
                     cpt_table.emplace_back(ConditionalProbability(vi_p, probabilities[c++]));
                 }
             }
