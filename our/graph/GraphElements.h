@@ -42,6 +42,8 @@ public:
     bool operator>=(const Node &rhs) const;
 
     void setId(NodeId id);
+
+    void setCPT(CPT cpt);
 };
 
 class Arc{

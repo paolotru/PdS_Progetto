@@ -88,3 +88,6 @@ void Node::setId(NodeId id) {
     Node::id = id;
 }
 
+void Node::setCPT(CPT c){
+    cpt.reset(&c);
+}

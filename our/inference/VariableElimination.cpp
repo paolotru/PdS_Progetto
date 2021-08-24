@@ -3,10 +3,10 @@
 //
 #include "VariableElimination.h"
 
-Graph VariableElimination::inferVariableProbability(Graph& g){
+Graph VariableElimination::inferVariableProbability(std::shared_ptr<Graph> g){
 
-    std::vector<Arc> arcs = g.getArcs();
-    std::vector<Node> nodes = g.getNodes();
+    std::vector<Arc> arcs = g->getArcs();
+    std::vector<Node> nodes = g->getNodes();
 
     std::map<Node, std::vector<Node>> factors;
 
@@ -17,41 +17,67 @@ Graph VariableElimination::inferVariableProbability(Graph& g){
         auto nodeAlreadyPresent = factors.find(dest);
         if(nodeAlreadyPresent != factors.end()){
             nodeAlreadyPresent->second.push_back(src);
+            std::cout << "push in vettore già presente nodo " << dest.getName() << std::endl;
         }
         else{
             std::vector<Node> toInsert;
             toInsert.push_back(src);
             factors.insert({dest, toInsert});
+            std::cout << "inserisco nodo " << dest.getName() << " e inserisco nel vettore " << src.getName() << std::endl;
         }
     }
 
     Graph output;
-
     for(Node& n: nodes){
         if(!n.getCpt()->isHasDependence()) {
-            output.addNode(n);
+            Node newNode = n;
+            std::cout << "aggiungo all'output nodo " << newNode.getName() << std::endl;
+
+
+            output.addNode(newNode);
             /* si può migliorare facendo che graph abbia ptr a nodi e archi, in questo modo il ptr
             può essere condiviso e occupare meno memoria*/
             continue;
         }
 
         std::vector<Status> statuses = n.getStatuses();
+        Node newNode = n;
+        newNode.getCpt()->printCPT();
+        std::cout << "NODO " << newNode.getName() << std::endl;
         for(auto& status: statuses){
+            std::cout << "STATUS " << status << std::endl;
             float probability = computeStatusProbability(g, n, status, factors);
+            std::cout << "PROBABILITA' CALCOLATA " << probability << std::endl;
             auto vi = std::make_shared<VariableInformations>(std::map<NodeId, Status>(), status);
             ConditionalProbability cp(vi,probability);
 
-            n.getCpt()->addProbability(cp);
+
+            if(newNode.getCpt().unique()){
+                std::cout << "ENTRO QUI SECONDA VOLTA" << std::endl;
+                newNode.getCpt()->addProbability(cp);
+                std::cout << "INIZIO" << std::endl;
+                newNode.getCpt()->printCPT();
+                std::cout << "FINE" << std::endl;
+            }else{
+                std::cout << "ENTRO QUI PRIMA VOLTA" << std::endl;
+                CPT cpt{};
+                newNode.setCPT(cpt);
+                newNode.getCpt()->addProbability(cp);
+                std::cout << "INIZIO" << std::endl;
+                newNode.getCpt()->printCPT();
+                std::cout << "FINE" << std::endl;
+            }
 
         }
+        output.addNode(newNode);
     }
 
     return output;
 }
 
-float VariableElimination::computeStatusProbability(Graph &g, Node &node, Status &s,
+float VariableElimination::computeStatusProbability(std::shared_ptr<Graph> g, Node &node, Status &s,
                                                     std::map <Node, std::vector<Node>> &factors) {
-    auto nodes = g.getNodes();
+    auto nodes = g->getNodes();
     std::vector<Node> rightNodes;
 
     for(auto& n:nodes) {
@@ -64,19 +90,26 @@ float VariableElimination::computeStatusProbability(Graph &g, Node &node, Status
     return prob;
 }
 
-void VariableElimination::recursiveFunction(std::vector<Node>& nodes, Node node, Status s, std::map <Node, std::vector<Node>> &factors, std::map<Node, Status> variables, float* p){
+void VariableElimination::recursiveFunction(std::vector<Node> nodes, Node& node, Status s, std::map <Node, std::vector<Node>> &factors, std::map<Node, Status> variables, float* p){
 
     if(nodes.empty()){
+        //std::cout << "calcolo probabilita' nodo " << node.getName() << " e stato " << s << std::endl;
         *p += computeProbability(factors, s, variables, node);
         return;
     }
 
-    auto nIt = nodes.erase(nodes.begin());
+    /*for(auto& n : nodes)
+        std::cout << n.getName();
+
+    std::cout << std::endl;*/
+    auto nIt = nodes.back();
+    //std::cout << "Erase del nodo " << nIt.getName() << std::endl;
     nodes.pop_back();
-    for(auto& status: nIt->getStatuses()){
-        variables.insert({*nIt,status});
+    for(auto& status: nIt.getStatuses()){
+        //std::cout << "considero stato " << status << " del nodo " << nIt.getName() << std::endl;
+        variables.insert({nIt,status});
         recursiveFunction(nodes, node, s, factors, variables, p);
-        variables.erase(*nIt);
+        variables.erase(nIt);
     }
 };
 
