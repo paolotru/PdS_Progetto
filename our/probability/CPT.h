@@ -24,6 +24,11 @@ public:
         return parents;
     }
 
+    void printParents(){
+        for(auto c : parents)
+            std::cout << " " << c.first << " " << c.second << ",";
+    }
+
     bool operator==(const VariableInformations &rhs) const;
 
     bool operator!=(const VariableInformations &rhs) const;
@@ -85,6 +90,13 @@ public:
 
     void printCPT() {
         for (auto &tp : cpt_table) {
+            if(hasDependence)
+            {
+                std::cout << "PARENTS : ";
+                tp.getVariableInfo()->printParents();
+                std::cout << std::endl;
+            }
+
             std::cout << "Status: " << tp.getVariableInfo()->getStatus() << std::endl;
             std::cout << "PROB " << tp.getProbability() << std::endl;
         }

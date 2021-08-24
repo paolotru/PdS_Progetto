@@ -10,6 +10,13 @@ Graph VariableElimination::inferVariableProbability(std::shared_ptr<Graph> g){
 
     std::map<Node, std::vector<Node>> factors;
 
+    for(auto& n : nodes){
+        if(!n.getCpt()->isHasDependence()){
+            std::vector<Node> toInsert;
+            factors.insert({n, toInsert});
+        }
+
+    }
     for(auto& a : arcs){
         Node src = a.getSource();
         Node dest = a.getDestination();
@@ -27,6 +34,7 @@ Graph VariableElimination::inferVariableProbability(std::shared_ptr<Graph> g){
         }
     }
 
+    std::cout << "I FATTORI SONO " << factors.size() << std::endl;
     Graph output;
     for(Node& n: nodes){
         if(!n.getCpt()->isHasDependence()) {
@@ -42,7 +50,11 @@ Graph VariableElimination::inferVariableProbability(std::shared_ptr<Graph> g){
 
         std::vector<Status> statuses = n.getStatuses();
         Node newNode = n;
+        CPT cpt{};
+        newNode.setCPT(cpt);
+        std::cout << "CPT NEW NODE " << std::endl;
         newNode.getCpt()->printCPT();
+        std::cout << "CPT HAS DEPENDENCE : " << newNode.getCpt()->isHasDependence() << std::endl;
         std::cout << "NODO " << newNode.getName() << std::endl;
         for(auto& status: statuses){
             std::cout << "STATUS " << status << std::endl;
@@ -51,27 +63,28 @@ Graph VariableElimination::inferVariableProbability(std::shared_ptr<Graph> g){
             auto vi = std::make_shared<VariableInformations>(std::map<NodeId, Status>(), status);
             ConditionalProbability cp(vi,probability);
 
-
-            if(newNode.getCpt().unique()){
-                std::cout << "ENTRO QUI SECONDA VOLTA" << std::endl;
-                newNode.getCpt()->addProbability(cp);
-                std::cout << "INIZIO" << std::endl;
-                newNode.getCpt()->printCPT();
-                std::cout << "FINE" << std::endl;
-            }else{
-                std::cout << "ENTRO QUI PRIMA VOLTA" << std::endl;
-                CPT cpt{};
-                newNode.setCPT(cpt);
-                newNode.getCpt()->addProbability(cp);
-                std::cout << "INIZIO" << std::endl;
-                newNode.getCpt()->printCPT();
-                std::cout << "FINE" << std::endl;
-            }
+            newNode.getCpt()->addProbability(cp);
+            std::cout << "INIZIO" << std::endl;
+            newNode.getCpt()->printCPT();
+            std::cout << "FINE" << std::endl;
 
         }
         output.addNode(newNode);
+        std::cout << "METTO NODE E PRINTO CPT" << std::endl;
+        std::cout << "CPT HAS DEPENDENCE : " << newNode.getCpt()->isHasDependence() << std::endl;
+        newNode.getCpt()->printCPT();
     }
 
+
+    nodes = output.getNodes();
+
+    std::cout << nodes.size();
+    for(auto it = nodes.begin(); it != nodes.end(); it++){
+        std::cout << "\nNODE " << it->getId() << std::endl;
+        std::cout << "CPT HAS DEPENDENCE : " << it->getCpt()->isHasDependence() << std::endl;
+        auto c = it->getCpt();
+        c->printCPT();
+    }
     return output;
 }
 
@@ -80,7 +93,7 @@ float VariableElimination::computeStatusProbability(std::shared_ptr<Graph> g, No
     auto nodes = g->getNodes();
     std::vector<Node> rightNodes;
 
-    for(auto& n:nodes) {
+    for(auto n : nodes) {
         if(n != node)
             rightNodes.push_back(n);
     }
@@ -93,8 +106,12 @@ float VariableElimination::computeStatusProbability(std::shared_ptr<Graph> g, No
 void VariableElimination::recursiveFunction(std::vector<Node> nodes, Node& node, Status s, std::map <Node, std::vector<Node>> &factors, std::map<Node, Status> variables, float* p){
 
     if(nodes.empty()){
-        //std::cout << "calcolo probabilita' nodo " << node.getName() << " e stato " << s << std::endl;
+        std::cout << "AGGIUNGO PROB node " << node.getName() << " e stato " << s << std::endl;
+        for(auto& a :variables)
+            std::cout << a.first.getId() << " e stato " << a.second << std::endl;
+
         *p += computeProbability(factors, s, variables, node);
+        std::cout << computeProbability(factors, s, variables, node) << std::endl;
         return;
     }
 
@@ -120,6 +137,7 @@ float VariableElimination::computeProbability(std::map <Node, std::vector<Node>>
     for(auto& it : variables){
         toBeChecked.insert(std::pair<NodeId, Status>(it.first.getId(),it.second));
     }
+
     for(auto& f : factors){
         std::vector<ConditionalProbability> cpt = f.first.getCpt()->getCPTTable();
         for(auto& c : cpt){
@@ -127,5 +145,6 @@ float VariableElimination::computeProbability(std::map <Node, std::vector<Node>>
                 result *= c.getProbability();
         }
     }
+    std::cout << "AGGIUNGO PROB " << result << std::endl;
     return result;
 }

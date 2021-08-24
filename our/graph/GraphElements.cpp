@@ -16,6 +16,19 @@ Node::Node(const Node &n) {
     cpt=n.cpt;
 }
 
+Node& Node::operator=(const Node& source) {
+    if(this != &source){
+        this->n_states = source.n_states;
+        this->name = source.name;
+        this->id = source.id;
+        this->cpt.reset();
+        this->cpt = source.cpt;
+        this->statuses = source.statuses;
+    }
+
+    return *this;
+}
+
 Node::~Node() = default;
 
 bool Node::operator==(const Node &rhs) const {

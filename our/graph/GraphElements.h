@@ -16,8 +16,9 @@ private:
     std::vector<Status> statuses;
     std::shared_ptr<CPT> cpt;
 public:
-    const std::shared_ptr<CPT> &getCpt() const;
+    const std::shared_ptr<CPT>& getCpt() const;
     bool operator==(const Node &rhs) const;
+    Node& operator=(const Node& source);
     bool operator!=(const Node &rhs) const;
 
     Node(std::string& name,NodeId id,int ns);
@@ -44,6 +45,8 @@ public:
     void setId(NodeId id);
 
     void setCPT(CPT cpt);
+
+
 };
 
 class Arc{

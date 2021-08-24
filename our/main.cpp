@@ -21,12 +21,11 @@ int main() {
    }
 
    Graph output = VariableElimination::inferVariableProbability(g);
-   auto nodes = output.getNodes();
-
-   for(auto it = nodes.begin(); it != nodes.end(); it++){
-       std::cout << "\nNODE " << it->getId() << std::endl;
-       auto c = it->getCpt();
-       c->printCPT();
+   for(auto ito = output.getNodes().begin(); ito != output.getNodes().end(); ito++){
+       std::cout << "\nNODE " << ito->getId() << std::endl;
+       std::cout << "CPT HAS DEPENDENCE : " << ito->getCpt()->isHasDependence() << std::endl;
+       //auto c = it->getCpt();
+       //c->printCPT();
    }
 
     return 0;

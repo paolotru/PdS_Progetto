@@ -5,7 +5,7 @@
 
 #include <utility>
 
-std::vector<Arc> Graph::getArcs() {
+std::vector<Arc> Graph::getArcs() const{
     return this->arcs;
 }
 std::vector<Node> Graph::getNodes() {
@@ -23,7 +23,7 @@ Graph::Graph(std::map<NodeId , Node> n, std::vector<Arc> a) {
 void Graph::addArc(const Arc& a) {
     arcs.push_back(a);
 }
-void Graph::addNode(Node& n) {
+void Graph::addNode(Node n) {
     nodes.emplace(n.getId(),n);
 }
 

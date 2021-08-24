@@ -21,11 +21,30 @@ public:
 
     Node getNodeById(NodeId id);
 
-    std::vector<Arc> getArcs();
+    std::vector<Arc> getArcs() const;
 
     void addArc(const Arc& a);
 
-    void addNode(Node& n);
+    void addNode(Node n);
+
+    Graph(const Graph& g){
+        nodes = g.getMaps();
+        arcs = g.getArcs();
+    }
+
+    Graph& operator=(const Graph& g){
+        if(this != &g){
+            this->arcs.clear();
+            this->arcs = g.getArcs();
+            this->nodes.clear();
+            this->nodes = g.getMaps();
+        }
+        return *this;
+    }
+
+    std::map<NodeId, Node> getMaps() const{
+        return nodes;
+    }
 };
 
 
