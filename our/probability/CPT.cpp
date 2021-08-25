@@ -4,7 +4,7 @@
 
 #include "CPT.h"
 
-void rec_f(int pos,int n,std::vector<std::map<NodeId,Status>> &v_map,std::map<NodeId,Status> map,const std::vector<NodeId>& parentsId,const std::vector<std::vector<Status>>& parentsStatuses);
+void rec_f(int pos,int n,std::vector<std::map<NodeId,Status>> &v_map,std::map<NodeId,Status> map,const std::vector<NodeId> parentsId,const std::vector<std::vector<Status>> parentsStatuses);
 
 CPT::CPT(std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> parents, std::vector<Status> states) {
     if(parents.empty()) {
@@ -28,10 +28,11 @@ CPT::CPT(std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> 
         int c=0;
         std::vector<std::map<NodeId,Status>> v_map;          //TODO: make shared?
         std::map<NodeId,Status> map;
-        rec_f(0,np-1,v_map,map,parentsId,parentsStatuses);
-        for (auto &comb : v_map) {
-            for (auto &s : states) {
-                std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(comb, s);
+        rec_f(0, parentsId.size(),v_map,map,parentsId,parentsStatuses);
+        for(auto comb=v_map.begin(); comb != v_map.end(); comb++){
+
+            for(auto s : states) {
+                std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(*comb, s);
                 cpt_table.emplace_back(ConditionalProbability(vi_p, probabilities[c++]));
             }
         }
@@ -67,13 +68,14 @@ ConditionalProbability::ConditionalProbability(const ConditionalProbability& cp)
     v_info=cp.v_info;
 }
 
-void rec_f(int pos,int n,std::vector<std::map<NodeId,Status>>& v_map,std::map<NodeId,Status> map,const std::vector<NodeId>& parentsId,const std::vector<std::vector<Status>>& parentsStatuses){
+void rec_f(int pos,int n,std::vector<std::map<NodeId,Status>>& v_map,std::map<NodeId,Status> map,const std::vector<NodeId> parentsId,const std::vector<std::vector<Status>> parentsStatuses){
     if(pos>=n){
         v_map.push_back(map);
         return;
     }
-    for (auto &s: parentsStatuses[pos]) {
-        map[parentsId[pos]]=s;
-        rec_f(pos+1,n,v_map,map,parentsId,parentsStatuses);
+
+    for (auto s : parentsStatuses[pos]) {
+        map[parentsId[pos]] = s;
+        rec_f(pos+1, n,v_map,map,parentsId,parentsStatuses);
     }
 }
