@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Unnamed" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="metastatic_cancer">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.2 0.8</probabilities>
+			<property id="VID">metastatic_cancer</property>
+			<property id="parents_order"></property>
+			<property id="cpt">0.2 0.8</property>
+		</cpt>
+		<cpt id="increased_serum_calcium">
+			<state id="True" />
+			<state id="False" />
+			<parents>metastatic_cancer</parents>
+			<probabilities>0.8 0.2 0.2 0.8</probabilities>
+			<property id="VID">increased_serum_calcium</property>
+			<property id="parents_order">metastatic_cancer</property>
+			<property id="cpt">0.8 0.2 0.2 0.8</property>
+		</cpt>
+		<cpt id="brain_tumor">
+			<state id="True" />
+			<state id="False" />
+			<parents>metastatic_cancer</parents>
+			<probabilities>0.2 0.05 0.8 0.95</probabilities>
+			<property id="VID">brain_tumor</property>
+			<property id="parents_order">metastatic_cancer</property>
+			<property id="cpt">0.2 0.05 0.8 0.95</property>
+		</cpt>
+		<cpt id="coma">
+			<state id="True" />
+			<state id="False" />
+			<parents>increased_serum_calcium brain_tumor</parents>
+			<property id="VID">coma</property>
+			<property id="parents_order">increased_serum_calcium brain_tumor</property>
+			<property id="cpt">0.8 0.8 0.8 0.05 0.2 0.2 0.2 0.95</property>
+		</cpt>
+		<cpt id="severe_headaches">
+			<state id="True" />
+			<state id="False" />
+			<parents>brain_tumor</parents>
+			<probabilities>0.8 0.6 0.2 0.4</probabilities>
+			<property id="VID">severe_headaches</property>
+			<property id="parents_order">brain_tumor</property>
+			<property id="cpt">0.8 0.6 0.2 0.4</property>
+		</cpt>
+	</nodes>
+</smile>
