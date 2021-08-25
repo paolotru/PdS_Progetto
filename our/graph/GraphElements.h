@@ -16,7 +16,7 @@ private:
     std::vector<Status> statuses;
     std::shared_ptr<CPT> cpt;
 public:
-    const std::shared_ptr<CPT>& getCpt() const;
+    const std::shared_ptr<CPT> getCpt() const;
     bool operator==(const Node &rhs) const;
     Node& operator=(const Node& source);
     bool operator!=(const Node &rhs) const;
@@ -44,7 +44,7 @@ public:
 
     void setId(NodeId id);
 
-    void setCPT(CPT cpt);
+    void resetCPT();
 
 
 };

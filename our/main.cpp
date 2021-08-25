@@ -7,7 +7,7 @@ int main() {
 
     BNReader reader;
 
-    reader.loadNetworkFromFile("..\\exampleNetworks\\prova_1.xdsl", bn);
+    reader.loadNetworkFromFile("..\\exampleNetworks\\prova_2.xdsl", bn);
     std::cout <<"Nodi letti: " <<bn->getNodeMap().size() <<std::endl;
     std::cout <<"Archi letti: "  << bn->getGraph()->getArcs().size() << std::endl;
 
@@ -21,13 +21,13 @@ int main() {
    }
 
    Graph output = VariableElimination::inferVariableProbability(g);
-   std::vector<Node> nodes = output.getNodes();
+   /*std::vector<Node> nodes = output.getNodes();
    for(auto ito = nodes.begin(); ito != nodes.end(); ito++){
        std::cout << "\nNODE " << ito->getId() << std::endl;
        std::cout << "CPT HAS DEPENDENCE : " << ito->getCpt()->isHasDependence() << std::endl;
        //auto c = it->getCpt();
        //c->printCPT();
-   }
+   }*/
 
     return 0;
 }

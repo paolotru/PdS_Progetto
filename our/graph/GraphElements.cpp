@@ -43,7 +43,7 @@ std::vector<Status> Node::getStatuses() {
     return this->statuses;
 }
 
-const std::shared_ptr<CPT> &Node::getCpt() const {
+const std::shared_ptr<CPT> Node::getCpt() const {
     return cpt;
 }
 
@@ -101,6 +101,7 @@ void Node::setId(NodeId id) {
     Node::id = id;
 }
 
-void Node::setCPT(CPT c){
-    cpt.reset(&c);
+void Node::resetCPT(){
+    cpt.reset();
+    cpt = std::make_shared<CPT>();
 }

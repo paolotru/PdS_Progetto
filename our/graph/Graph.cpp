@@ -10,7 +10,7 @@ std::vector<Arc> Graph::getArcs() const{
 }
 std::vector<Node> Graph::getNodes() {
     std::vector<Node> v;
-    for(auto& n : nodes)
+    for(auto n : nodes)
         v.push_back(n.second);
     return v;
 }
@@ -24,7 +24,7 @@ void Graph::addArc(const Arc& a) {
     arcs.push_back(a);
 }
 void Graph::addNode(Node n) {
-    nodes.emplace(n.getId(),n);
+    nodes.insert(std::pair<NodeId, Node>(n.getId(),n));
 }
 
 Node Graph::getNodeById(NodeId id) {

@@ -49,14 +49,22 @@ public:
         return probability;
     };
 
-    bool checkParentVectors(std::map<NodeId, Status> variables, Status s){
-        if(s != v_info->getStatus())
+    bool checkParentVectors(std::map<NodeId, Status> variables, NodeId n, Status s, NodeId cptId){
+        if(n == cptId && s != v_info->getStatus())
+            return false;
+
+        if(variables.find(cptId) != variables.end() && variables.find(cptId)->second != v_info->getStatus())
             return false;
 
         for(auto& cp : v_info->getParents()){
             bool found = false;
             for(auto& v : variables){
                 if(v.first == cp.first && v.second == cp.second)
+                    found = true;
+            }
+
+            if(!found){
+                if(n == cp.first && s == cp.second)
                     found = true;
             }
 
