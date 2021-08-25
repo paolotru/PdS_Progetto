@@ -4,6 +4,7 @@
 
 #include "CPT.h"
 
+void rec_f(int pos,int n,std::vector<std::map<NodeId,Status>> &v_map,std::map<NodeId,Status> map,const std::vector<NodeId>& parentsId,const std::vector<std::vector<Status>>& parentsStatuses);
 
 CPT::CPT(std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> parents, std::vector<Status> states) {
     if(parents.empty()) {
@@ -16,25 +17,26 @@ CPT::CPT(std::vector<float> probabilities, std::map<NodeId,std::vector<Status>> 
         }
     }else{
         hasDependence=true;
+        int np=1;
         std::vector<NodeId> parentsId;
         std::vector<std::vector<Status>> parentsStatuses;
         for(auto & parent : parents) {
             parentsId.push_back(parent.first);
             parentsStatuses.push_back(parent.second);
+            np *= parent.second.size();
         }
         int c=0;
-        for (int i = 0; i < parents.size(); i++) {
-
-            for (int k = 0; k < parentsStatuses[i].size(); ++k) {
-                std::map<NodeId,Status> map;
-                map[parentsId[i]]=(parentsStatuses[i])[k];          //TODO: make shared?
-
-                for (int j = 0; j < states.size(); ++j) {
-                    std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(map, states[j]);
-                    cpt_table.emplace_back(ConditionalProbability(vi_p, probabilities[c++]));
-                }
+        std::vector<std::map<NodeId,Status>> v_map;          //TODO: make shared?
+        std::map<NodeId,Status> map;
+        rec_f(0,np-1,v_map,map,parentsId,parentsStatuses);
+        for (auto &comb : v_map) {
+            for (auto &s : states) {
+                std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(comb, s);
+                cpt_table.emplace_back(ConditionalProbability(vi_p, probabilities[c++]));
             }
         }
+        map.clear();
+        v_map.clear();
     }
 }
 
@@ -63,4 +65,15 @@ ConditionalProbability::ConditionalProbability(std::shared_ptr<VariableInformati
 ConditionalProbability::ConditionalProbability(const ConditionalProbability& cp) {
     probability=cp.probability;
     v_info=cp.v_info;
+}
+
+void rec_f(int pos,int n,std::vector<std::map<NodeId,Status>>& v_map,std::map<NodeId,Status> map,const std::vector<NodeId>& parentsId,const std::vector<std::vector<Status>>& parentsStatuses){
+    if(pos>=n){
+        v_map.push_back(map);
+        return;
+    }
+    for (auto &s: parentsStatuses[pos]) {
+        map[parentsId[pos]]=s;
+        rec_f(pos+1,n,v_map,map,parentsId,parentsStatuses);
+    }
 }
