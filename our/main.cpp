@@ -7,27 +7,16 @@ int main() {
 
     BNReader reader;
 
-    reader.loadNetworkFromFile("..\\exampleNetworks\\prova_2.xdsl", bn);
-    std::cout <<"Nodi letti: " <<bn->getNodeMap().size() <<std::endl;
-    std::cout <<"Archi letti: "  << bn->getGraph()->getArcs().size() << std::endl;
+    reader.loadNetworkFromFile("..\\exampleNetworks\\Coma.xdsl", bn);
 
-    auto g = bn->getGraph();
-    auto n = g->getNodes();
-
-   for(auto it = n.begin(); it != n.end(); it++){
-        std::cout << "\nNODE " << it->getId() << std::endl;
-        auto c = it->getCpt();
-        c->printCPT();
-   }
-
-   Graph output = VariableElimination::inferVariableProbability(g);
-   /*std::vector<Node> nodes = output.getNodes();
+   Graph output = VariableElimination::inferVariableProbability(bn->getGraph());
+   std::vector<Node> nodes = output.getNodes();
    for(auto ito = nodes.begin(); ito != nodes.end(); ito++){
-       std::cout << "\nNODE " << ito->getId() << std::endl;
+       std::cout << "\nNODE " << ito->getName() << std::endl;
        std::cout << "CPT HAS DEPENDENCE : " << ito->getCpt()->isHasDependence() << std::endl;
-       //auto c = it->getCpt();
-       //c->printCPT();
-   }*/
+       auto c = ito->getCpt();
+       c->printCPT();
+   }
 
     return 0;
 }

@@ -51,8 +51,6 @@ Graph VariableElimination::inferVariableProbability(std::shared_ptr<Graph> g){
         std::vector<Status> statuses = n.getStatuses();
         Node newNode = n;
         newNode.resetCPT();
-        std::cout << "CPT NEW NODE " << std::endl;
-        newNode.getCpt()->printCPT();
         std::cout << "CPT HAS DEPENDENCE : " << newNode.getCpt()->isHasDependence() << std::endl;
         std::cout << "NODO " << newNode.getName() << std::endl;
         for(auto status: statuses){
@@ -61,37 +59,9 @@ Graph VariableElimination::inferVariableProbability(std::shared_ptr<Graph> g){
             std::cout << "PROBABILITA' CALCOLATA " << probability << std::endl;
             auto vi = std::make_shared<VariableInformations>(std::map<NodeId, Status>(), status);
             ConditionalProbability cp(vi,probability);
-
-            std::cout << "REF COUNT " << newNode.getCpt().use_count() << std::endl;
-            auto tmp = output.getNodes();
-            std::cout << tmp.size();
-            for(auto it = tmp.begin(); it != tmp.end(); it++){
-                std::cout << "\nNODE " << it->getName() << std::endl;
-                std::cout << "CPT HAS DEPENDENCE : " << it->getCpt()->isHasDependence() << std::endl;
-                auto c = it->getCpt();
-                c->printCPT();
-            }
             newNode.getCpt()->addProbability(cp);
         }
         output.addNode(newNode);
-        auto tmp = output.getNodes();
-        std::cout << tmp.size();
-        for(auto it = tmp.begin(); it != tmp.end(); it++){
-            std::cout << "\nNODE " << it->getName() << std::endl;
-            std::cout << "CPT HAS DEPENDENCE : " << it->getCpt()->isHasDependence() << std::endl;
-            auto c = it->getCpt();
-            c->printCPT();
-        }
-    }
-
-
-    auto tmp = output.getNodes();
-    std::cout << tmp.size();
-    for(auto it = tmp.begin(); it != tmp.end(); it++){
-        std::cout << "\nNODE " << it->getName() << std::endl;
-        std::cout << "CPT HAS DEPENDENCE : " << it->getCpt()->isHasDependence() << std::endl;
-        auto c = it->getCpt();
-        c->printCPT();
     }
     return output;
 }
