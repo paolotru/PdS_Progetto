@@ -28,7 +28,7 @@ public:
 
     ~Node();
 
-    std::vector<Status> getStatuses();
+    std::vector<Status> getStatuses() const;
 
     NodeId getId() const;
 

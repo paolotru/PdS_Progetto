@@ -39,7 +39,7 @@ bool Node::operator!=(const Node &rhs) const {
     return id != rhs.id;
 }
 
-std::vector<Status> Node::getStatuses() {
+std::vector<Status> Node::getStatuses() const{
     return this->statuses;
 }
 

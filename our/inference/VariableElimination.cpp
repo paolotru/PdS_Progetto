@@ -36,37 +36,46 @@ Graph VariableElimination::inferVariableProbability(std::shared_ptr<Graph> g){
 
     std::cout << "I FATTORI SONO " << factors.size() << std::endl;
     Graph output;
+
+    std::vector<std::thread> threads;
+
     for(Node n: nodes){
-        if(!n.getCpt()->isHasDependence()) {
+        threads.emplace_back([&output, n, &factors, g](){
+            if(!n.getCpt()->isHasDependence()) {
+                Node newNode = n;
+                std::cout << "aggiungo all'output nodo " << newNode.getName() << std::endl;
+
+
+                output.addNode(newNode);
+                /* si può migliorare facendo che graph abbia ptr a nodi e archi, in questo modo il ptr
+                può essere condiviso e occupare meno memoria*/
+                return;
+            }
+
+            std::vector<Status> statuses = n.getStatuses();
             Node newNode = n;
-            std::cout << "aggiungo all'output nodo " << newNode.getName() << std::endl;
-
-
+            newNode.resetCPT();
+            std::cout << "CPT HAS DEPENDENCE : " << newNode.getCpt()->isHasDependence() << std::endl;
+            std::cout << "NODO " << newNode.getName() << std::endl;
+            for(auto status: statuses){
+                std::cout << "STATUS " << status << std::endl;
+                float probability = computeStatusProbability(g, n, status, factors);
+                std::cout << "PROBABILITA' CALCOLATA " << probability << std::endl;
+                auto vi = std::make_shared<VariableInformations>(std::map<NodeId, Status>(), status);
+                ConditionalProbability cp(vi,probability);
+                newNode.getCpt()->addProbability(cp);
+            }
             output.addNode(newNode);
-            /* si può migliorare facendo che graph abbia ptr a nodi e archi, in questo modo il ptr
-            può essere condiviso e occupare meno memoria*/
-            continue;
-        }
-
-        std::vector<Status> statuses = n.getStatuses();
-        Node newNode = n;
-        newNode.resetCPT();
-        std::cout << "CPT HAS DEPENDENCE : " << newNode.getCpt()->isHasDependence() << std::endl;
-        std::cout << "NODO " << newNode.getName() << std::endl;
-        for(auto status: statuses){
-            std::cout << "STATUS " << status << std::endl;
-            float probability = computeStatusProbability(g, n, status, factors);
-            std::cout << "PROBABILITA' CALCOLATA " << probability << std::endl;
-            auto vi = std::make_shared<VariableInformations>(std::map<NodeId, Status>(), status);
-            ConditionalProbability cp(vi,probability);
-            newNode.getCpt()->addProbability(cp);
-        }
-        output.addNode(newNode);
+        });
     }
+
+    for(std::thread& t : threads)
+        t.join();
+
     return output;
 }
 
-float VariableElimination::computeStatusProbability(std::shared_ptr<Graph> g, Node &node, Status &s,
+float VariableElimination::computeStatusProbability(std::shared_ptr<Graph> g, Node node, Status &s,
                                                     std::map <Node, std::vector<Node>> &factors) {
     auto nodes = g->getNodes();
     std::vector<Node> rightNodes;
