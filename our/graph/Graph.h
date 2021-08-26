@@ -6,26 +6,41 @@
 #include "GraphElements.h"
 #include "vector"
 
-
+template <class T>
 class Graph {
     //std::vector<Node> nodes;
-    std::map<NodeId,Node> nodes;
-    std::vector<Arc> arcs;
+    std::map<NodeId,Node<T>> nodes;
+    std::vector<Arc<T>> arcs;
 public:
-    Graph();
-    Graph(std::map<NodeId, Node> n, std::vector<Arc> a);
+    Graph(){};
 
-    virtual ~Graph();
+    Graph(std::map<NodeId , Node<T>> n, std::vector<Arc<T>> a) {
+        nodes=std::move(n);
+        arcs=std::move(a);
+    }
 
-    std::vector<Node> getNodes();
+    std::vector<Node<T>> getNodes() const{
+        std::vector<Node<T>> v;
+        for(auto n : nodes)
+            v.push_back(n.second);
+        return v;
+    }
 
-    Node getNodeById(NodeId id);
+    Node<T> getNodeById(NodeId id) {
+        return nodes.find(id)->second;
+    };
 
-    std::vector<Arc> getArcs() const;
+    std::vector<Arc<T>> getArcs() const{
+        return this->arcs;
+    }
 
-    void addArc(const Arc& a);
+    void addArc(const Arc<T>& a) {
+        arcs.push_back(a);
+    };
 
-    void addNode(Node n);
+    void addNode(Node<T> n) {
+        nodes.insert(std::pair<NodeId, Node<T>>(n.getId(),n));
+    }
 
     Graph(const Graph& g){
         nodes = g.getMaps();
@@ -42,7 +57,7 @@ public:
         return *this;
     }
 
-    std::map<NodeId, Node> getMaps() const{
+    std::map<NodeId, Node<T>> getMaps() const{
         return nodes;
     }
 };

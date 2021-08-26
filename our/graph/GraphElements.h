@@ -8,60 +8,110 @@
 typedef int NodeId;
 typedef std::string Status;
 
+template <class T>
 class Node{
 private:
     std::string name;
     NodeId id;
     int n_states;
     std::vector<Status> statuses;
-    std::shared_ptr<CPT> cpt;
+    std::shared_ptr<CPT<T>> cpt;
 public:
-    const std::shared_ptr<CPT> getCpt() const;
-    bool operator==(const Node &rhs) const;
-    Node& operator=(const Node& source);
-    bool operator!=(const Node &rhs) const;
+    const std::shared_ptr<CPT<T>> getCpt() const {
+        return cpt;
+    }
+    bool operator==(const Node &rhs) const {
+        return id == rhs.id;
+    }
+    Node& operator=(const Node& source) {
+        if(this != &source){
+            this->n_states = source.n_states;
+            this->name = source.name;
+            this->id = source.id;
+            this->cpt.reset();
+            this->cpt = source.cpt;
+            this->statuses = source.statuses;
+        }
 
-    Node(std::string& name,NodeId id,int ns);
-    Node(std::string& name,std::vector<Status> states,NodeId id,std::vector<float> probabilities,std::map<NodeId,std::vector<Status>> parents);
+        return *this;
+    };
 
-    Node(const Node& n);
+    bool operator!=(const Node &rhs) const {
+        return id != rhs.id;
+    }
 
-    ~Node();
+    Node(std::string &name, NodeId id,int ns) : name(name),id(id),n_states(ns) {};
 
-    std::vector<Status> getStatuses() const;
+    Node(std::string &name, std::vector<Status> states, NodeId id, std::vector<T> probabilities, std::map<NodeId,std::vector<Status>> parents) {
+        this->name=std::move(name);
+        this->id=id;
+        this->n_states=states.size();
+        this->cpt=std::make_shared<CPT<T>>(probabilities,parents,states);
+        this->statuses=states;
+    };
 
-    NodeId getId() const;
+    Node(const Node &n) {
+        name=n.name;
+        id=n.id;
+        n_states=n.n_states;
+        statuses=n.statuses;
+        cpt=n.cpt;
+    }
 
-    std::string getName();
+    std::vector<Status> getStatuses() const{
+        return this->statuses;
+    }
 
-    bool operator<(const Node &rhs) const;
+    NodeId getId() const {
+        return id;
+    }
 
-    bool operator>(const Node &rhs) const;
+    std::string getName() const{
+        return name;
+    }
 
-    bool operator<=(const Node &rhs) const;
+    void setId(NodeId id) {
+        Node::id = id;
+    }
 
-    bool operator>=(const Node &rhs) const;
+    void resetCPT(){
+        cpt.reset();
+        cpt = std::make_shared<CPT<T>>();
+    }
 
-    void setId(NodeId id);
+    bool operator<(const Node<T> &rhs) const {
+        return id < rhs.id;
+    }
 
-    void resetCPT();
+    bool operator>(const Node<T> &rhs) const {
+        return rhs < *this;
+    }
 
+    bool operator<=(const Node<T> &rhs) const {
+        return !(rhs < *this);
+    }
 
+    bool operator>=(const Node<T> &rhs) const {
+        return !(*this < rhs);
+    }
 };
 
+template <class T>
 class Arc{
 private:
-    Node source, destination;
+    Node<T> source, destination;
 public:
-    Arc(Node n1,Node n2);
+    Arc(Node<T> n1, Node<T> n2) : source(n1),destination(n2){};
 
-    Arc(const Arc& a);
+    Arc(const Arc &a) : source(a.source), destination(a.destination) {};
 
-    ~Arc();
+    Node<T> getSource() const{
+        return source;
+    }
 
-    Node& getSource();
-
-    Node& getDestination();
+    Node<T> getDestination() const{
+        return destination;
+    }
 };
 
 

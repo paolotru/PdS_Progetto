@@ -17,13 +17,12 @@
 #include "BayesianNetwork.h"
 #include "../graph/GraphElements.h"
 
-typedef float T;
 using namespace rapidxml;
 
 //reader class for bayesian network stored in .xdsl files
 //the template parameter is used to define the precision of the probability red from the file
 
-
+template <class T>
 class BNReader {
 public:
     BNReader() = default;;
@@ -117,12 +116,12 @@ public:
 //                std::cout<<s<<std::endl;
 //            }
             std::map<NodeId,std::vector<Status>> parentsM = splitParents(parents, bn);
-            std::vector<float> probabilities = splitProbabilities(probDistribution);
+            std::vector<T> probabilities = splitProbabilities(probDistribution);
 
 //            std::cout << "splitparents: " << std::endl;
 //            std::cout << "splitparents size: "<<parentsM.size() << std::endl;
 
-            Node n(varName,stateNames,-1,probabilities,parentsM);
+            Node<T> n(varName,stateNames,-1,probabilities,parentsM);
             bn->addNode(n);
             if(!parentsM.empty()){
                 std::vector<NodeId> parentsId;
@@ -189,18 +188,18 @@ private:
     }
 
     //splits the string containing the probability distribution and adds each combination of states with its probability to the CPT
-    std::vector<float> splitProbabilities(std::string& probDistribution) {
+    std::vector<T> splitProbabilities(std::string& probDistribution) {
         int pos;
-        std::vector<float> probs;
+        std::vector<T> probs;
 
         while ((pos = probDistribution.find(" ")) != std::string::npos) {
-            float prob = std::stof(probDistribution.substr(0, pos));
+            T prob = std::stof(probDistribution.substr(0, pos));
             probDistribution = probDistribution.substr(pos + 1);
             probs.push_back(prob);
 
         }
 
-        float prob = std::stof(probDistribution);
+        T prob = std::stof(probDistribution);
 
         probs.push_back(prob);
 
