@@ -16,7 +16,7 @@
 #include "base/rapidxml.hpp"
 #include "BayesianNetwork.h"
 #include "../graph/GraphElements.h"
-
+#include "../probability/CPT.h"
 using namespace rapidxml;
 
 //reader class for bayesian network stored in .xdsl files
@@ -120,7 +120,8 @@ public:
 
 //            std::cout << "splitparents: " << std::endl;
 //            std::cout << "splitparents size: "<<parentsM.size() << std::endl;
-
+/*controllare che non ci sia altra cpt identica, stessi stati e padri e fare nodo*/
+/*************************************************************************************/
             Node<T> n(varName,stateNames,-1,probabilities,parentsM);
             bn->addNode(n);
             if(!parentsM.empty()){
@@ -136,7 +137,37 @@ public:
 //
 //        bn.addArcsFromCPTs();
     }
-
+    //stateNames è insieme di stati in cui si trova noda
+    //probabilità da associare
+    //padri con il rispettivo stato
+    bool checkEqualCPT(std::vector<ConditionalProbability<T>> cpt_table, std::vector<std::string> stateNames,std::vector<T> probabilities,std::map<NodeId,std::vector<Status>> parentsM, std::shared_ptr<BayesianNetwork<T>> bn) {
+        bool flag;
+        for (auto nodo: bn->getNodeMap()) { //ciclo su tutti i nodi
+            flag= true;
+                for (auto c: nodo.getSecond()->getCpt()->getCPTTable() && flag) { //cpt table
+                    //controllo se hanno stessa dimensione ( vettore )
+                    if (cpt_table.size() != c.size())
+                        flag = false;
+                    if (flag) {
+                        int tot = 0;
+                        auto prob = c->getProbability(); //prob
+                        for (auto varinf: c->getVariableInfo()) { //varinf: stato nodo + stato dei vari padri
+                            for (auto var: cpt_table->getVariableInfo()) { //ciclo su stati del nodo di interesse
+                                if (varinf->getStatus() == var->getStatus() &&
+                                    varinf->getParents() == var->getParents() && prob == cpt_table.getProbability())
+                                    tot++;
+                            }
+                        }
+                        if (tot == cpt_table.size()) {
+                            //faccio un make shared e break
+                            cpt_table = nullptr;
+                            cpt_table = std::make_shared<T>(c);
+                            break;
+                        }
+                    }
+                }
+        }
+    }
 private:
 
     ////given the vector of variables for the current CPT, inserts the initial combination into combination
@@ -167,6 +198,7 @@ private:
     //}
 
     //splits the string of parents into a vector containing their id and their number of states
+
     std::map<NodeId,std::vector<Status>> splitParents(std::string& parents, std::shared_ptr<BayesianNetwork<T>> bn) {
         int pos;
         NodeId parentId;

@@ -6,6 +6,7 @@
 #include <memory>
 #include <map>
 #include <iostream>
+#include "../probability/COW.h"
 
 typedef int NodeId;
 typedef std::string Status;
@@ -89,6 +90,8 @@ private:
     bool hasDependence;
     std::vector<ConditionalProbability<T>> cpt_table;
 
+
+public:
     void rec_f(int pos,int n,std::vector<std::map<NodeId,Status>>& v_map,std::map<NodeId,Status> map,const std::vector<NodeId> parentsId,const std::vector<std::vector<Status>> parentsStatuses){
         if(pos>=n){
             v_map.push_back(map);
@@ -100,8 +103,6 @@ private:
             rec_f(pos+1, n,v_map,map,parentsId,parentsStatuses);
         }
     };
-
-public:
     std::vector<ConditionalProbability<T>> getCPTTable(){
         return this->cpt_table;
     }
@@ -142,6 +143,7 @@ public:
                     std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(*comb, s);
                     cpt_table.emplace_back(ConditionalProbability(vi_p, probabilities[c++]));
                 }
+                //aggiunta di funzione controllo
             }
             map.clear();
             v_map.clear();
