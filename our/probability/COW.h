@@ -4,8 +4,7 @@
 
 //template class used to enforce the copy-on-write pattern
 template<typename T=float>
-class COW
-{
+class COW{
 public:
     COW(){}
     // call this function in derived constructor

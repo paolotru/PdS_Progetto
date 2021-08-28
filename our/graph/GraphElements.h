@@ -40,7 +40,6 @@ public:
         return id != rhs.id;
     }
 
-    Node(std::string &name, NodeId id,int ns) : name(name),id(id),n_states(ns) {};
 
     Node(std::string &name, std::vector<Status> states, NodeId id, std::vector<T> probabilities, std::map<NodeId,std::vector<Status>> parents) {
         this->name=std::move(name);

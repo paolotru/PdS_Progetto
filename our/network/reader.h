@@ -5,9 +5,6 @@
 #ifndef OUR_READER_H
 #define OUR_READER_H
 
-
-#pragma once
-
 #include <string>
 #include <fstream>
 #include <sstream>
@@ -16,7 +13,6 @@
 #include "base/rapidxml.hpp"
 #include "BayesianNetwork.h"
 #include "../graph/GraphElements.h"
-#include "../probability/CPT.h"
 using namespace rapidxml;
 
 //reader class for bayesian network stored in .xdsl files
@@ -78,8 +74,7 @@ public:
                     attr = pStates->first_attribute("id");
                     if (attr != NULL)
                         stateNames.emplace_back(attr->value());
-                }
-                else if (name == "resultingstates") {
+                } else if (name == "resultingstates") {
                     resultingStates.append(pStates->value());
                 }
                     //reading cpt of the variable
@@ -90,36 +85,11 @@ public:
                 else if (name == "parents") {
                     parents.append(pStates->value());
                 }
-                //else if (name == "property") {
-                //	attr = pStates->first_attribute("id");
-                //	std::string id(attr->value());
-
-
-                //if (id == "VID") {
-                //	varName.append(pStates->value());
-                //}
-
-                //else if (id == "parents_order") {
-                //	parents.append(pStates->value());
-                //}
-
-                //else if (id == "cpt") {
-                //	probDistribution.append(pStates->value());
-
-                //}
-                //}
-
             }
-//            std::cout << "varName: " << varName << std::endl;
-//            std::cout << "parents: " << parents << std::endl;
-//            for (auto &s : stateNames) {
-//                std::cout<<s<<std::endl;
-//            }
             std::map<NodeId,std::vector<Status>> parentsM = splitParents(parents, bn);
             std::vector<T> probabilities = splitProbabilities(probDistribution);
 
-//            std::cout << "splitparents: " << std::endl;
-//            std::cout << "splitparents size: "<<parentsM.size() << std::endl;
+
 /*controllare che non ci sia altra cpt identica, stessi stati e padri e fare nodo*/
 /*************************************************************************************/
             Node<T> n(varName,stateNames,-1,probabilities,parentsM);
@@ -130,7 +100,6 @@ public:
                     parentsId.push_back(p.first);
                 bn->addArcs(n,parentsId);
             }
-
         }
 
 //        bn.checkSparseCPTs();
@@ -167,37 +136,9 @@ public:
                     }
                 }
         }
+        return flag;
     }
 private:
-
-    ////given the vector of variables for the current CPT, inserts the initial combination into combination
-    //void getInitialCombination(std::vector<VarStates>& states, std::vector<int>& combination) {
-    //	for (int i = 0; i < states.size(); i++) {
-    //		combination.push_back(0);
-    //	}
-    //}
-
-    ////given the vector of variables for the current CPT, inserts in combination the next one to the that already stored
-    //void getNextCombination(std::vector<VarStates>& states, std::vector<int>& combination) {
-    //	int inc = 1;
-
-    //	for (int i = combination.size() - 1; i > -1; i--) {
-    //		combination[i] += inc;
-    //		combination[i] = combination[i] % states[i].m_nStates;
-    //		if (combination[i] != 0) break;
-    //	}
-    //}
-
-    ////returns the number of combinations of states for the current CPT
-    //int getNumberOfCombinations(std::vector<VarStates>& states) {
-    //	int numCombinations = 1;
-    //	for (auto it = states.begin(); it != states.end(); it++)
-    //		numCombinations *= it->m_nStates;
-
-    //	return numCombinations;
-    //}
-
-    //splits the string of parents into a vector containing their id and their number of states
 
     std::map<NodeId,std::vector<Status>> splitParents(std::string& parents, std::shared_ptr<BayesianNetwork<T>> bn) {
         int pos;
