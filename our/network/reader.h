@@ -1,7 +1,3 @@
-//
-// Created by S290225 on 11/08/2021.
-//
-
 #ifndef OUR_READER_H
 #define OUR_READER_H
 
@@ -105,10 +101,6 @@ public:
                 bn->addArcs(n,parentsId);
             }
         }
-
-//        bn.checkSparseCPTs();
-//
-//        bn.addArcsFromCPTs();
     }
     //stateNames è insieme di stati in cui si trova noda
     //probabilità da associare
@@ -179,23 +171,6 @@ private:
 
         return probs;
     }
-
-    //splits the string containing the resulting states into a vector of string. returns the number of states found.
-    //used for deterministic variables
-//    int splitResultingStates(std::string& resultingStates, std::vector<std::string>& resultingStatesSplitted) {
-//        if (resultingStates.empty()) return 0;
-//        int pos;
-//        while ((pos = resultingStates.find(" ")) != std::string::npos) {
-//            std::string state = resultingStates.substr(0, pos);
-//            resultingStates = resultingStates.substr(pos + 1);
-//
-//            resultingStatesSplitted.push_back(state);
-//        }
-//
-//        resultingStatesSplitted.push_back(resultingStates);
-//
-//        return resultingStatesSplitted.size();
-//    }
 };
 
 
