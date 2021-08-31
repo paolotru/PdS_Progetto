@@ -104,7 +104,7 @@ public:
                 newNode.resetCPT();
                 for(auto status: statuses){
                     T probability = computeStatusProbability(g, n, status, factors);
-                    VariableInformations vi(std::map<NodeId, Status>(), status);
+                    VariableInformations vi(std::make_shared<std::map<NodeId, Status>>(), status);
                     ConditionalProbability<T> cp(vi,probability);
                     newNode.getCpt()->addProbability(cp);
                 }

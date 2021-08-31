@@ -12,21 +12,21 @@ typedef std::string Status;
 
 class VariableInformations{
 private:
-    std::map<NodeId, Status> parents;
+    std::shared_ptr<std::map<NodeId, Status>> parents;
     Status status;
 public:
     VariableInformations(){};
-    VariableInformations(std::map<NodeId, Status> parents, Status status);
+    VariableInformations(std::shared_ptr<std::map<NodeId, Status>> parents, Status status);
     VariableInformations(const VariableInformations& vi);
     Status getStatus(){
         return status;
     }
     std::map<NodeId, Status> getParents(){
-        return parents;
+        return *parents;
     }
 
     void printParents(){
-        for(auto c : parents)
+        for(auto c : *parents)
             std::cout << " " << c.first << " " << c.second << ",";
     }
 
@@ -122,7 +122,7 @@ public:
     CPT(std::vector<T> probabilities, std::map<NodeId,std::vector<Status>> parents, std::vector<Status> states) {
         if(parents.empty()) {
             hasDependence = false;
-            std::map<NodeId,Status> m;
+            std::shared_ptr<std::map<NodeId, Status>> m=std::make_shared<std::map<NodeId, Status>>();
             for (int i = 0;i<states.size();i++) {
                 VariableInformations vi_p (m,states[i]);
                 ConditionalProbability cp(vi_p,probabilities[i]);
@@ -141,8 +141,9 @@ public:
             std::map<NodeId,Status> map;
             rec_f(0, parentsId.size(),v_map,map,parentsId,parentsStatuses);
             for(auto comb=v_map.begin(); comb != v_map.end(); comb++){
+                std::shared_ptr<std::map<NodeId, Status>> p=std::make_shared<std::map<NodeId, Status>>(*comb);
                 for(auto s : states) {
-                    VariableInformations vi_p (*comb, s);
+                    VariableInformations vi_p (p, s);
                     cpt_table.emplace_back(ConditionalProbability(vi_p, probabilities[c++]));
                 }
             }

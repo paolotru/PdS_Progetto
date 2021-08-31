@@ -45,19 +45,11 @@ public:
 
             std::vector<std::string> stateNames;
 
-            int nStates;
-
             std::string parents;
-
-            std::vector<VariableInformations> variablesOrder;
-
-            std::vector<std::vector<int>> variablesCombinations;
 
             std::string probDistribution;
 
             std::string resultingStates;
-
-            std::vector<std::string> resultingStatesSplitted;
 
             //reading variable name
             varName.append(attr->value());

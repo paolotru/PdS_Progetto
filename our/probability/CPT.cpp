@@ -6,7 +6,7 @@
 
 
 
-VariableInformations::VariableInformations(std::map<NodeId, Status> parents, Status status) {
+VariableInformations::VariableInformations(std::shared_ptr<std::map<NodeId, Status>> parents, Status status) {
     this->parents=std::move(parents);
     this->status=std::move(status);
 }
@@ -17,7 +17,7 @@ VariableInformations::VariableInformations(const VariableInformations& vi) {
 }
 
 bool VariableInformations::operator==(const VariableInformations &rhs) const {
-    return parents == rhs.parents && status == rhs.status;
+    return *parents == *rhs.parents && status == rhs.status;
 }
 
 bool VariableInformations::operator!=(const VariableInformations &rhs) const {
