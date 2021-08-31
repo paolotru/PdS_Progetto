@@ -80,17 +80,13 @@ public:
             auto nodeAlreadyPresent = factors.find(dest);
             if(nodeAlreadyPresent != factors.end()){
                 nodeAlreadyPresent->second.push_back(src);
-                std::cout << "push in vettore già presente nodo " << dest.getName() << std::endl;
             }
             else{
                 std::vector<Node<T>> toInsert;
                 toInsert.push_back(src);
                 factors.insert({dest, toInsert});
-                std::cout << "inserisco nodo " << dest.getName() << " e inserisco nel vettore " << src.getName() << std::endl;
             }
         }
-
-        std::cout << "I FATTORI SONO " << factors.size() << std::endl;
         Graph<T> output;
 
         std::vector<std::thread> threads;

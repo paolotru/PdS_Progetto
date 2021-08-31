@@ -14,9 +14,11 @@ int main() {
     auto nodes = output.getNodes();
     for(auto ito = nodes.begin(); ito != nodes.end(); ito++){
         std::cout << "\nNODE " << ito->getName() << std::endl;
-        std::cout << "CPT HAS DEPENDENCE : " << ito->getCpt()->isHasDependence() << std::endl;
         auto c = ito->getCpt();
-        c->printCPT();
+        for(auto& tp : c->getCPTTable())
+            std::cout << "P(" << ito->getName() << " = " << tp.getVariableInfo()->getStatus() << ") = " << tp.getProbability() << std::endl;
+
+        std::cout << std::endl;
     }
 
     return 0;
