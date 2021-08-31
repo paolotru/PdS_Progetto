@@ -17,8 +17,7 @@ VariableInformations::VariableInformations(const VariableInformations& vi) {
 }
 
 bool VariableInformations::operator==(const VariableInformations &rhs) const {
-    return parents == rhs.parents &&
-           status == rhs.status;
+    return parents == rhs.parents && status == rhs.status;
 }
 
 bool VariableInformations::operator!=(const VariableInformations &rhs) const {

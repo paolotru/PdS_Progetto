@@ -17,6 +17,8 @@ private:
     std::vector<Status> statuses;
     std::shared_ptr<CPT<T>> cpt;
 public:
+    Node(){};
+
     const std::shared_ptr<CPT<T>> getCpt() const {
         return cpt;
     }
@@ -46,6 +48,13 @@ public:
         this->id=id;
         this->n_states=states.size();
         this->cpt=std::make_shared<CPT<T>>(probabilities,parents,states);
+        this->statuses=states;
+    };
+    Node(std::string &name,std::vector<Status> states, NodeId id, std::shared_ptr<CPT<T>> cpt) {
+        this->name=std::move(name);
+        this->id=id;
+        this->n_states=states.size();
+        this->cpt=cpt;
         this->statuses=states;
     };
 

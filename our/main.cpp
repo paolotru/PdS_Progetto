@@ -16,7 +16,7 @@ int main() {
         std::cout << "\nNODE " << ito->getName() << std::endl;
         auto c = ito->getCpt();
         for(auto& tp : c->getCPTTable())
-            std::cout << "P(" << ito->getName() << " = " << tp.getVariableInfo()->getStatus() << ") = " << tp.getProbability() << std::endl;
+            std::cout << "P(" << ito->getName() << " = " << tp.getVariableInfo().getStatus() << ") = " << tp.getProbability() << std::endl;
 
         std::cout << std::endl;
     }

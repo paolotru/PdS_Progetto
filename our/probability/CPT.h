@@ -15,6 +15,7 @@ private:
     std::map<NodeId, Status> parents;
     Status status;
 public:
+    VariableInformations(){};
     VariableInformations(std::map<NodeId, Status> parents, Status status);
     VariableInformations(const VariableInformations& vi);
     Status getStatus(){
@@ -37,18 +38,19 @@ public:
 template <class T>
 class ConditionalProbability{
 private:
-    std::shared_ptr<VariableInformations> v_info;
+    VariableInformations v_info;
     T probability;
 
 public:
-    ConditionalProbability(std::shared_ptr<VariableInformations> vInfo, T probability): v_info(std::move(vInfo)), probability(probability) {};
-
     ConditionalProbability(const ConditionalProbability& cp) {
         probability=cp.probability;
         v_info=cp.v_info;
-    };
+    }
 
-    std::shared_ptr<VariableInformations> getVariableInfo() const{
+    ConditionalProbability(const VariableInformations &vInfo, T probability) : v_info(vInfo),
+                                                                               probability(probability) {};
+
+    VariableInformations getVariableInfo() const{
         return v_info;
     };
 
@@ -57,13 +59,13 @@ public:
     };
 
     bool checkParentVectors(std::map<NodeId, Status> variables, NodeId n, Status s, NodeId cptId){
-        if(n == cptId && s != v_info->getStatus())
+        if(n == cptId && s != v_info.getStatus())
             return false;
 
-        if(variables.find(cptId) != variables.end() && variables.find(cptId)->second != v_info->getStatus())
+        if(variables.find(cptId) != variables.end() && variables.find(cptId)->second != v_info.getStatus())
             return false;
 
-        for(auto& cp : v_info->getParents()){
+        for(auto& cp : v_info.getParents()){
             bool found = false;
             for(auto& v : variables){
                 if(v.first == cp.first && v.second == cp.second)
@@ -81,6 +83,10 @@ public:
 
         return true;
     }
+    bool operator==(const ConditionalProbability &rhs) const {
+        return v_info == rhs.v_info &&
+               probability == rhs.probability;
+    }
 };
 
 template <class T>
@@ -91,7 +97,7 @@ private:
 
 
 public:
-    void rec_f(int pos,int n,std::vector<std::map<NodeId,Status>>& v_map,std::map<NodeId,Status> map,const std::vector<NodeId> parentsId,const std::vector<std::vector<Status>> parentsStatuses){
+    static void rec_f(int pos,int n,std::vector<std::map<NodeId,Status>>& v_map,std::map<NodeId,Status> map,const std::vector<NodeId> parentsId,const std::vector<std::vector<Status>> parentsStatuses){
         if(pos>=n){
             v_map.push_back(map);
             return;
@@ -118,28 +124,25 @@ public:
             hasDependence = false;
             std::map<NodeId,Status> m;
             for (int i = 0;i<states.size();i++) {
-                std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(m,states[i]);
+                VariableInformations vi_p (m,states[i]);
                 ConditionalProbability cp(vi_p,probabilities[i]);
                 cpt_table.emplace_back(cp);
             }
         }else{
             hasDependence=true;
-            int np=1;
             std::vector<NodeId> parentsId;
             std::vector<std::vector<Status>> parentsStatuses;
             for(auto & parent : parents) {
                 parentsId.push_back(parent.first);
                 parentsStatuses.push_back(parent.second);
-                np *= parent.second.size();
             }
             int c=0;
             std::vector<std::map<NodeId,Status>> v_map;
             std::map<NodeId,Status> map;
             rec_f(0, parentsId.size(),v_map,map,parentsId,parentsStatuses);
             for(auto comb=v_map.begin(); comb != v_map.end(); comb++){
-
                 for(auto s : states) {
-                    std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(*comb, s);
+                    VariableInformations vi_p (*comb, s);
                     cpt_table.emplace_back(ConditionalProbability(vi_p, probabilities[c++]));
                 }
             }
@@ -155,13 +158,22 @@ public:
             if(hasDependence)
             {
                 std::cout << "PARENTS : ";
-                tp.getVariableInfo()->printParents();
+                tp.getVariableInfo().printParents();
                 std::cout << std::endl;
             }
 
-            std::cout << "Status: " << tp.getVariableInfo()->getStatus() << std::endl;
+            std::cout << "Status: " << tp.getVariableInfo().getStatus() << std::endl;
             std::cout << "PROB " << tp.getProbability() << std::endl;
         }
+    }
+
+    bool operator==(const CPT &rhs) const {
+        return hasDependence == rhs.hasDependence &&
+               cpt_table == rhs.cpt_table;
+    }
+
+    bool operator!=(const CPT &rhs) const {
+        return !(rhs == *this);
     }
 };
 

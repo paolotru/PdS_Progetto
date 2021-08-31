@@ -5,6 +5,7 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <utility>
 
 #include "base/rapidxml.hpp"
 #include "BayesianNetwork.h"
@@ -88,11 +89,16 @@ public:
 
 /*controllare che non ci sia altra cpt identica, stessi stati e padri e fare nodo*/
 /*************************************************************************************/
-            std::tuple<bool, std::shared_ptr<CPT<T>>> t = checkEqualCPT(stateNames, probabilities, parentsM, bn);
-            if(t.first == false)
-                Node<T> n(varName,stateNames,-1,probabilities,parentsM);
-            else
-                Node<T> n(varName,-1,t.second);
+            Node<T> n{};
+            std::shared_ptr<CPT<T>> t = checkEqualCPT(stateNames, probabilities, parentsM, bn);
+            if(t == nullptr) {
+                Node<T> n1(varName, stateNames, -1, probabilities, parentsM);
+                n=n1;
+            }
+            else {
+                Node<T> n1(varName,stateNames, -1, t);
+                n=n1;
+            }
             bn->addNode(n);
             if(!parentsM.empty()){
                 std::vector<NodeId> parentsId;
@@ -102,36 +108,47 @@ public:
             }
         }
     }
-    //stateNames è insieme di stati in cui si trova noda
-    //probabilità da associare
-    //padri con il rispettivo stato
-    std::tuple<bool, std::shared_ptr<CPT<T>>> checkEqualCPT(std::vector<std::string> stateNames, std::vector<T> probabilities, std::map<NodeId,std::vector<Status>> parentsM, std::shared_ptr<BayesianNetwork<T>> bn) {
+private:
+    std::shared_ptr<CPT<T>> checkEqualCPT(std::vector<std::string> stateNames, std::vector<T> probabilities, std::map<NodeId,std::vector<Status>> parentsM, std::shared_ptr<BayesianNetwork<T>> bn) {
         int tot;
         auto nodes = bn->getGraph()->getNodes();
         for (auto node: nodes) {
             tot = 0;
-            //controllo se hanno stessa dimensione ( vettore )
-            auto cptTable = node->getCpt()->getCPTTable();
-
-            if (probabilities.size() != cptTable.size())
+            auto cpt = node.getCpt();
+            if (probabilities.size() != cpt->getCPTTable().size())
                 continue;
-
-            T prob = cptTable->getProbability();
-            for (auto varinf: cptTable->getVariableInfo()) { //varinf: stato node + stato dei vari padri
-                for(int i = 0; i < stateNames.size(); i++) { //ciclo su stati del node di interesse
-                    if (varinf->getStatus() == stateNames[i] &&
-                    varinf->getParents() == pare && prob == cpt_table.getProbability())
-                        tot++;
-                }
+            CPT<T> testCpt(probabilities, parentsM, stateNames);
+            if(testCpt == *cpt){
+                return cpt;
             }
-            if (tot == probabilities.size()) {
-                return std::tuple<bool, std::shared_ptr<CPT<T>>>(true, cptTable);
-            }
+//            std::vector<NodeId> parentsId;
+//            std::vector<std::vector<Status>> parentsStatuses;
+//            for(auto & parent : parentsM) {
+//                parentsId.push_back(parent.first);
+//                parentsStatuses.push_back(parent.second);
+//            }
+//            std::vector<std::map<NodeId,Status>> v_map;
+//            std::map<NodeId,Status> map;
+//            CPT<T>::rec_f(0,parentsM.size(),v_map,map,parentsId,parentsStatuses);
+//            for(auto comb=v_map.begin(); comb != v_map.end(); comb++){
+//                for(auto s : stateNames) {
+//
+//                }
+//            }
+//            T prob = cptTable->getProbability();
+//            for (auto varinf: cptTable->getVariableInfo()) { //varinf: stato node + stato dei vari padri
+//                for(int i = 0; i < stateNames.size(); i++) { //ciclo su stati del node di interesse
+//                    if (varinf->getStatus() == stateNames[i] &&
+//                    varinf->getParents() == pare && prob == cpt_table.getProbability())
+//                        tot++;
+//                }
+//            }
+//            if (tot == probabilities.size()) {
+//                return std::pair<bool, std::shared_ptr<CPT<T>>>(true, cptTable);
+//            }
         }
-
-        return std::tuple<bool, std::shared_ptr<CPT<T>>>(false, nullptr);
+        return nullptr;
     }
-private:
 
     std::map<NodeId,std::vector<Status>> splitParents(std::string& parents, std::shared_ptr<BayesianNetwork<T>> bn) {
         int pos;
