@@ -6,6 +6,7 @@
 #include <map>
 #include <iostream>
 #include "../probability/COW.h"
+#include "../network/BayesianNetwork.h"
 
 typedef int NodeId;
 typedef std::string Status;
@@ -113,7 +114,7 @@ public:
         cpt_table.push_back(p);
     }
 
-    CPT(std::vector<T> probabilities, std::map<NodeId,std::vector<Status>> parents, std::vector<Status> states) {
+    CPT(std::vector<T> probabilities, std::map<NodeId,std::vector<Status>> parents, std::vector<Status> states, std::shared_ptr<BayesianNetwork<T>> bn) {
         if(parents.empty()) {
             hasDependence = false;
             std::map<NodeId,Status> m;
@@ -137,13 +138,12 @@ public:
             std::map<NodeId,Status> map;
             rec_f(0, parentsId.size(),v_map,map,parentsId,parentsStatuses);
             for(auto comb=v_map.begin(); comb != v_map.end(); comb++){
-
                 for(auto s : states) {
                     std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(*comb, s);
                     cpt_table.emplace_back(ConditionalProbability(vi_p, probabilities[c++]));
                 }
-                //aggiunta di funzione controllo
             }
+            checkEqualCPT(bn);
             map.clear();
             v_map.clear();
         }
@@ -165,6 +165,34 @@ public:
         }
     }
 };
-
+void checkEqualCPT(std::shared_ptr<BayesianNetwork<T>> bn) {
+    bool flag;
+    int tot;
+    auto nodi= bn->getNodeMap();
+    for (auto nodo: nodi) {
+        //sono nel nodo
+        flag = true;
+        tot = 0;
+        //controllo se hanno stessa dimensione ( vettore )
+        auto vect = nodo.getSecond()->getCpt()->getCPTTable();
+        if (cpt_table.size() != vect.size())
+            flag = false;
+        for (auto m: vect && flag) {
+            //sono nella conditional prob
+            auto c = m->getVariableInfo();
+            auto prob = m.getProbability(); //prob
+            for (auto var: cpt_table->getVariableInfo()) { //ciclo su vettore del nodo di interesse
+                if (c->getStatus() == var->getStatus() &&
+                    var->getParents() == c->getParents() && prob == cpt_table.getProbability())
+                    tot++;
+            }
+        }
+        if (tot == cpt_table.size()) {
+            cpt_table = nullptr;
+            cpt_table = vect;
+            break;
+        }
+    }
+}
 
 #endif //OUR_CPT_H
