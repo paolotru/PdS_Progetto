@@ -4,7 +4,7 @@
 #include <memory>
 #include <vector>
 #include "../probability/CPT.h"
-#include "../network/BayesianNetwork.h"
+
 typedef int NodeId;
 typedef std::string Status;
 
@@ -41,11 +41,11 @@ public:
     }
 
 
-    Node(std::string &name, std::vector<Status> states, NodeId id, std::vector<T> probabilities, std::map<NodeId,std::vector<Status>> parents,std::shared_ptr<BayesianNetwork<T>> bn) {
+    Node(std::string &name, std::vector<Status> states, NodeId id, std::vector<T> probabilities, std::map<NodeId,std::vector<Status>> parents) {
         this->name=std::move(name);
         this->id=id;
         this->n_states=states.size();
-        this->cpt=std::make_shared<CPT<T>>(probabilities,parents,states,bn);
+        this->cpt=std::make_shared<CPT<T>>(probabilities,parents,states);
         this->statuses=states;
     };
 
