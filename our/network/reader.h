@@ -92,7 +92,11 @@ public:
 
 /*controllare che non ci sia altra cpt identica, stessi stati e padri e fare nodo*/
 /*************************************************************************************/
-            Node<T> n(varName,stateNames,-1,probabilities,parentsM);
+            std::tuple<bool, std::shared_ptr<CPT<T>>> t = checkEqualCPT(stateNames, probabilities, parentsM, bn);
+            if(t.first == false)
+                Node<T> n(varName,stateNames,-1,probabilities,parentsM);
+            else
+                Node<T> n(varName,-1,t.second);
             bn->addNode(n);
             if(!parentsM.empty()){
                 std::vector<NodeId> parentsId;
@@ -109,34 +113,31 @@ public:
     //stateNames è insieme di stati in cui si trova noda
     //probabilità da associare
     //padri con il rispettivo stato
-    bool checkEqualCPT(std::vector<ConditionalProbability<T>> cpt_table, std::vector<std::string> stateNames,std::vector<T> probabilities,std::map<NodeId,std::vector<Status>> parentsM, std::shared_ptr<BayesianNetwork<T>> bn) {
-        bool flag;
-        for (auto nodo: bn->getNodeMap()) { //ciclo su tutti i nodi
-            flag= true;
-                for (auto c: nodo.getSecond()->getCpt()->getCPTTable() && flag) { //cpt table
-                    //controllo se hanno stessa dimensione ( vettore )
-                    if (cpt_table.size() != c.size())
-                        flag = false;
-                    if (flag) {
-                        int tot = 0;
-                        auto prob = c->getProbability(); //prob
-                        for (auto varinf: c->getVariableInfo()) { //varinf: stato nodo + stato dei vari padri
-                            for (auto var: cpt_table->getVariableInfo()) { //ciclo su stati del nodo di interesse
-                                if (varinf->getStatus() == var->getStatus() &&
-                                    varinf->getParents() == var->getParents() && prob == cpt_table.getProbability())
-                                    tot++;
-                            }
-                        }
-                        if (tot == cpt_table.size()) {
-                            //faccio un make shared e break
-                            cpt_table = nullptr;
-                            cpt_table = std::make_shared<T>(c);
-                            break;
-                        }
-                    }
+    std::tuple<bool, std::shared_ptr<CPT<T>>> checkEqualCPT(std::vector<std::string> stateNames, std::vector<T> probabilities, std::map<NodeId,std::vector<Status>> parentsM, std::shared_ptr<BayesianNetwork<T>> bn) {
+        int tot;
+        auto nodes = bn->getGraph()->getNodes();
+        for (auto node: nodes) {
+            tot = 0;
+            //controllo se hanno stessa dimensione ( vettore )
+            auto cptTable = node->getCpt()->getCPTTable();
+
+            if (probabilities.size() != cptTable.size())
+                continue;
+
+            T prob = cptTable->getProbability();
+            for (auto varinf: cptTable->getVariableInfo()) { //varinf: stato node + stato dei vari padri
+                for(int i = 0; i < stateNames.size(); i++) { //ciclo su stati del node di interesse
+                    if (varinf->getStatus() == stateNames[i] &&
+                    varinf->getParents() == pare && prob == cpt_table.getProbability())
+                        tot++;
                 }
+            }
+            if (tot == probabilities.size()) {
+                return std::tuple<bool, std::shared_ptr<CPT<T>>>(true, cptTable);
+            }
         }
-        return flag;
+
+        return std::tuple<bool, std::shared_ptr<CPT<T>>>(false, nullptr);
     }
 private:
 

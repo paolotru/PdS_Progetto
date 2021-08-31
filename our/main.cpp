@@ -7,7 +7,7 @@ int main() {
 
     BNReader<float> reader;
 
-    reader.loadNetworkFromFile("..\\exampleNetworks\\Coma.xdsl", bn);
+    reader.loadNetworkFromFile("..\\exampleNetworks\\hailfinder.xdsl", bn);
 
 
     auto output = VariableElimination<float>::inferVariableProbability(bn->getGraph());

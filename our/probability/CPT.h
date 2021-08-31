@@ -133,7 +133,7 @@ public:
                 np *= parent.second.size();
             }
             int c=0;
-            std::vector<std::map<NodeId,Status>> v_map;          //TODO: make shared?
+            std::vector<std::map<NodeId,Status>> v_map;
             std::map<NodeId,Status> map;
             rec_f(0, parentsId.size(),v_map,map,parentsId,parentsStatuses);
             for(auto comb=v_map.begin(); comb != v_map.end(); comb++){
@@ -142,7 +142,6 @@ public:
                     std::shared_ptr<VariableInformations> vi_p = std::make_shared<VariableInformations>(*comb, s);
                     cpt_table.emplace_back(ConditionalProbability(vi_p, probabilities[c++]));
                 }
-                //aggiunta di funzione controllo
             }
             map.clear();
             v_map.clear();
