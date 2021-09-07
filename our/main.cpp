@@ -8,23 +8,8 @@ int main() {
 
     BNReader<double> reader;
 
-    SYSTEM_INFO sysinfo;
-    GetSystemInfo(&sysinfo);
-    int numCPU = sysinfo.dwNumberOfProcessors;
-
-    std::cout << numCPU << std::endl;
-
     clock_t start = clock();
     reader.loadNetworkFromFile("..\\exampleNetworks\\ARM_properties_net_alt.xdsl", bn);
-
-    auto input = bn->getGraph();
-    auto inNodes = input->getNodes();
-    std::cout << "Nodi letti: " << inNodes.size() << std::endl;
-    for(auto i : inNodes) {
-        if(i.getStatuses().size() == 8){
-            std::cout << i.getCpt()->getCPTTable().size() << std::endl;
-        }
-    }
 
     auto output = VariableElimination<double>::inferVariableProbability(bn->getGraph());
     auto nodes = output.getNodes();

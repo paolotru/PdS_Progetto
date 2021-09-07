@@ -9,6 +9,8 @@
 #include <utility>
 #include <thread>
 #include <mutex>
+#include <sysinfoapi.h>
+#include <cmath>
 
 template <class T>
 class VariableElimination {
@@ -133,7 +135,51 @@ public:
         std::map<NodeId, Status> datas;
         fill_parallelization_data_structure(parallelization, g->getNodes(), 0, datas);
 
-        for(auto n: nodes){
+        SYSTEM_INFO sysinfo;
+        GetSystemInfo(&sysinfo);
+        int numCPU = sysinfo.dwNumberOfProcessors;
+
+        int effectiveCPU = numCPU - 2;
+
+        int numberOfNodesForThread = ceil((float)nodes.size() / effectiveCPU);
+        auto start = nodes.begin();
+        auto end = start + numberOfNodesForThread;
+        for(int i = 0; i < effectiveCPU; i++){
+            threads.emplace_back([&output, start, end, &factors, g, &m, &parallelization, &forParallelization](){
+                for(auto n = start; n != end; n++){
+                    if(!n->getCpt()->isHasDependence()) {
+                        auto newNode = *n;
+                        m.lock();
+                        output.addNode(newNode);
+                        m.unlock();
+                        return;
+                    }
+                    std::vector<Status> statuses = n->getStatuses();
+                    auto newNode = *n;
+                    newNode.resetCPT();
+                    for(auto status: statuses){
+                        T probability = computeStatusProbability(g, *n, status, factors, parallelization, forParallelization);
+                        VariableInformations vi(std::make_shared<std::map<NodeId, Status>>(), status);
+                        ConditionalProbability<T> cp(vi,probability);
+                        newNode.getCpt()->addProbability(cp);
+                    }
+
+                    m.lock();
+                    output.addNode(newNode);
+                    m.unlock();
+                }
+            });
+            if(end == nodes.end())
+                break;
+
+            start = end;
+            end = start + numberOfNodesForThread;
+            if(end > nodes.end())
+            {
+                end = nodes.end();
+            }
+        }
+        /*for(auto n: nodes){
             threads.emplace_back([&output, n, &factors, g, &m, &parallelization, &forParallelization](){
                 if(!n.getCpt()->isHasDependence()) {
                     auto newNode = n;
@@ -158,7 +204,8 @@ public:
                 m.unlock();
             });
         }
-
+*/
+        std::cout << "NUMBER OF THREADS: " << threads.size() << std::endl;
         for(std::thread& t : threads)
             t.join();
 
