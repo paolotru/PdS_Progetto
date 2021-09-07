@@ -5,7 +5,7 @@
 #include <vector>
 #include <map>
 #include <iostream>
-#include "../probability/COW.h"
+#include <memory>
 
 typedef int NodeId;
 typedef std::string Status;
