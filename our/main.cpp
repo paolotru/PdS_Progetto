@@ -1,5 +1,4 @@
 #include <iostream>
-#include <sysinfoapi.h>
 #include "network/reader.h"
 #include "inference/VariableElimination.h"
 
