@@ -14,7 +14,7 @@
 
 template <class T>
 class VariableElimination {
-    static T computeStatusProbability(std::shared_ptr<Graph<T>> g, Node<T> node, Status& s, std::map<Node<T>, std::vector<Node<T>>>& factors, std::vector<std::pair<std::map<NodeId,Status>, T>>& parallelization, std::mutex& m){
+    static T computeStatusProbability(Node<T> node, Status& s, std::map<Node<T>, std::vector<Node<T>>>& factors, std::vector<std::pair<std::map<NodeId,Status>, T>>& parallelization, std::mutex& m){
         T p = 0;
         for(int i = 0; i < parallelization.size(); i++){
             auto map = parallelization[i].first;
@@ -66,7 +66,6 @@ class VariableElimination {
             fill_parallelization_data_structure(parallelization, nodes, pos+1, map);
             map.erase(nodes[pos].getId());
         }
-        return;
     }
 public:
     static Graph<T> inferVariableProbability(std::shared_ptr<Graph<T>> g){
@@ -125,7 +124,7 @@ public:
                     auto newNode = *n;
                     newNode.resetCPT();
                     for(auto status: statuses){
-                        T probability = computeStatusProbability(g, *n, status, factors, parallelization, forParallelization);
+                        T probability = computeStatusProbability(*n, status, factors, parallelization, forParallelization);
                         VariableInformations vi(std::make_shared<std::map<NodeId, Status>>(), status);
                         ConditionalProbability<T> cp(vi,probability);
                         newNode.getCpt()->addProbability(cp);

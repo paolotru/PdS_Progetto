@@ -9,7 +9,7 @@ int main() {
     BNReader<double> reader;
 
     clock_t start = clock();
-    reader.loadNetworkFromFile("..\\exampleNetworks\\ARM_properties_net_alt.xdsl", bn);
+    reader.loadNetworkFromFile("..\\exampleNetworks\\hailfinder.xdsl", bn);
 
     auto output = VariableElimination<double>::inferVariableProbability(bn->getGraph());
     auto nodes = output.getNodes();
