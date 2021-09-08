@@ -15,62 +15,31 @@
 template <class T>
 class VariableElimination {
     static T computeStatusProbability(std::shared_ptr<Graph<T>> g, Node<T> node, Status& s, std::map<Node<T>, std::vector<Node<T>>>& factors, std::vector<std::pair<std::map<NodeId,Status>, T>>& parallelization, std::mutex& m){
-        std::vector<Node<T>> nodes = g->getNodes();
-        std::vector<Node<T>> rightNodes;
-
-        for(Node<T> n : nodes) {
-            if(n != node)
-                rightNodes.push_back(n);
-        }
-        std::map<Node<T>, Status> variables;
-        T prob = 0;
-        recursiveFunction(rightNodes, node, s, factors, variables, &prob, parallelization, m);
-        return prob;
-    }
-
-    static void recursiveFunction(std::vector<Node<T>> nodes, Node<T>& node, Status s, std::map <Node<T>, std::vector<Node<T>>>& factors, std::map<Node<T>, Status> variables, T* p, std::vector<std::pair<std::map<NodeId,Status>, T>>& parallelization, std::mutex& m){
-        if(nodes.empty()){
-            std::map<NodeId, Status> toCheck;
-            for(auto v = variables.begin(); v != variables.end(); v++){
-                toCheck.insert(std::make_pair(v->first.getId(), v->second));
-            }
-            toCheck.insert(std::make_pair(node.getId(), s));
-            m.lock();
-            for(auto it = parallelization.begin(); it != parallelization.end(); it++){
-                if(it->first == toCheck){
-                    if(it->second == -1){
-                        m.unlock();
-                        T prob = computeProbability(factors, s, variables, node);
-                        m.lock();
-                        *p += prob;
-                        it->second = prob;
-                    }
-                    else{
-                        *p += it->second;
-                    }
-                    break;
+        T p = 0;
+        for(int i = 0; i < parallelization.size(); i++){
+            auto map = parallelization[i].first;
+            if(map.find(node.getId())->second == s){
+                m.lock();
+                if(parallelization[i].second == -1){
+                    m.unlock();
+                    T prob = computeProbability(factors, s, map, node);
+                    m.lock();
+                    p += prob;
+                    parallelization[i].second = prob;
                 }
+                else{
+                    p += parallelization[i].second;
+                }
+                m.unlock();
             }
-            m.unlock();
-            return;
         }
 
-        auto nIt = nodes.back();
-        nodes.pop_back();
-        for(auto& status: nIt.getStatuses()){
-            variables.insert({nIt,status});
-            recursiveFunction(nodes, node, s, factors, variables, p, parallelization, m);
-            variables.erase(nIt);
-        }
+
+        return p;
     }
-    static T computeProbability(std::map <Node<T>, std::vector<Node<T>>>& factors, Status s, std::map<Node<T>, Status> variables, Node<T> node){
+
+    static T computeProbability(std::map <Node<T>, std::vector<Node<T>>>& factors, Status s, std::map<NodeId, Status> toBeChecked, Node<T> node){
         T result = 1;
-
-        std::map<NodeId, Status> toBeChecked;
-        for(auto& it : variables){
-            toBeChecked.insert(std::pair<NodeId, Status>(it.first.getId(),it.second));
-        }
-
         for(auto& f : factors){
             std::vector<ConditionalProbability<T>> cpt = f.first.getCpt()->getCPTTable();
             for(auto& c : cpt){
@@ -139,12 +108,10 @@ public:
         GetSystemInfo(&sysinfo);
         int numCPU = sysinfo.dwNumberOfProcessors;
 
-        int effectiveCPU = numCPU - 2;
-
-        int numberOfNodesForThread = ceil((float)nodes.size() / effectiveCPU);
+        int numberOfNodesForThread = ceil((float)nodes.size() / numCPU);
         auto start = nodes.begin();
         auto end = start + numberOfNodesForThread;
-        for(int i = 0; i < effectiveCPU; i++){
+        for(int i = 0; i < numCPU; i++){
             threads.emplace_back([&output, start, end, &factors, g, &m, &parallelization, &forParallelization](){
                 for(auto n = start; n != end; n++){
                     if(!n->getCpt()->isHasDependence()) {
@@ -179,33 +146,7 @@ public:
                 end = nodes.end();
             }
         }
-        /*for(auto n: nodes){
-            threads.emplace_back([&output, n, &factors, g, &m, &parallelization, &forParallelization](){
-                if(!n.getCpt()->isHasDependence()) {
-                    auto newNode = n;
-                    m.lock();
-                    output.addNode(newNode);
-                    m.unlock();
-                    return;
-                }
 
-                std::vector<Status> statuses = n.getStatuses();
-                auto newNode = n;
-                newNode.resetCPT();
-                for(auto status: statuses){
-                    T probability = computeStatusProbability(g, n, status, factors, parallelization, forParallelization);
-                    VariableInformations vi(std::make_shared<std::map<NodeId, Status>>(), status);
-                    ConditionalProbability<T> cp(vi,probability);
-                    newNode.getCpt()->addProbability(cp);
-                }
-
-                m.lock();
-                output.addNode(newNode);
-                m.unlock();
-            });
-        }
-*/
-        std::cout << "NUMBER OF THREADS: " << threads.size() << std::endl;
         for(std::thread& t : threads)
             t.join();
 
