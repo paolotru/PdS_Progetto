@@ -1,3 +1,0 @@
-/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/cmake-build-debug/CMakeFiles/edit_cache.dir
-/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/c/Users/elite/Desktop/WEB APPLICATION/PdS_Progetto/cmake-build-debug/CMakeFiles/PdS_Progetto.dir
