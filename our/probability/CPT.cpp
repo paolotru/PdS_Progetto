@@ -4,8 +4,6 @@
 
 #include "CPT.h"
 
-
-
 VariableInformations::VariableInformations(std::shared_ptr<std::map<NodeId, Status>> parents, Status status) {
     this->parents=std::move(parents);
     this->status=std::move(status);

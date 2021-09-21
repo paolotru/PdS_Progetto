@@ -10,10 +10,6 @@
 template <class T>
 class BayesianNetwork {
 private:
-//    std::shared_ptr<DAG> m_bn;
-//    CPTs<T> m_cpt;
-//    std::map<NodeId, NodeId> m_nodeWithSameCPT;
-//    VariableNodeMap m_vnm;
     NodeId counter = 0;
     std::shared_ptr<Graph<T>> graph;
     std::map<std::string, Node<T>> nodeMap;
