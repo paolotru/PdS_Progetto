@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="21c6230f-7042-485e-8830-0cb6c454b700" name="Default Changelist" comment="input">
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/PdS_Progetto.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/.idea/Bayesian Network.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/cmake-build-debug/Project.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/exampleDataSets/alarm.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/exampleNetworks/ARM_properties_net.xdsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/exampleNetworks/ARM_properties_net_alt.xdsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/exampleNetworks/andes.xdsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/exampleNetworks/barley.xdsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/exampleNetworks/hailfinder.xdsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/exampleNetworks/prova_1.xdsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/exampleNetworks/prova_2.xdsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/DAG.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/DAG.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/JunctionTree.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/JunctionTree.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/UndirectedGraph.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/UndirectedGraph.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/graphStructure/ArcSet.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/graphStructure/ArcSet.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/graphStructure/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/graphStructure/Clique.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/graphStructure/Clique.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/graphStructure/EdgeSet.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/graphStructure/EdgeSet.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/graphStructure/GraphElements.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/graphs/graphStructure/GraphElements.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/inference/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/inference/LazyPropagation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/inference/LazyPropagation.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/learning/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/learning/io/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/learning/io/CSVDataStructure.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/learning/io/CSVReader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/learning/io/base/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/learning/io/base/rapidcsv.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/networks/BayesianNet.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/networks/BayesianNet.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/networks/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/networks/io/BNReader.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/networks/io/BNReader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/networks/io/BNWriter.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/networks/io/BNWriter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/networks/io/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/networks/io/base/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/networks/io/base/rapidxml.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/networks/io/base/rapidxml_iterators.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/networks/io/base/rapidxml_print.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/networks/io/base/rapidxml_utils.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/probability/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/probability/CPT.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/probability/Potential.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/tools/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/tools/ThreadPoolManager.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/tools/ThreadPoolManager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/tools/VariableNodeMap.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/tools/VariableNodeMap.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/tools/base/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/tools/base/COW.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/tools/base/COW.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/Bayesian Network/src/tools/base/thread_pool.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/CMakeSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bayesengine/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/our.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.19.2/CompilerIdCXX/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/graph/Graph.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/graph/GraphElements.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/inference/VariableElimination.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/network/BayesianNetwork.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/network/reader.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/probability/CPT.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/our.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/our.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/our.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/our.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/our.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleDataSets/alarm.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleNetworks/ARM_properties_net.xdsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleNetworks/ARM_properties_net_alt.xdsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleNetworks/coma.xdsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleNetworks/prova_1.xdsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exampleNetworks/prova_2.xdsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/Graph.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/Graph.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/GraphElements.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/GraphElements.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inference/VariableElimination.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inference/VariableElimination.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/BayesianNetwork.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/BayesianNetwork.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/base/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/base/rapidxml.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/base/rapidxml_iterators.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/base/rapidxml_print.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/base/rapidxml_utils.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/reader.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/reader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/probability/CPT.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/probability/CPT.h" beforeDir="false" />
+    </list>
+    <list id="abc9e05b-06fe-470e-b338-27888cc4f1f5" name="Revert &quot;fixed variable elimination class&quot;" comment="Revert &quot;fixed variable elimination class&quot;&#10;&#10;This reverts commit ced86d73" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1wUta9OgpKyNNJ4ucUxmzsk6SdJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="cmake.loaded.for.project" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/network" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\our\network" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\our\probability" />
+      <recent name="C:\Users\S290225\Documents\UNI\PdS\PdS_Progetto\our" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21c6230f-7042-485e-8830-0cb6c454b700" name="Default Changelist" comment="" />
+      <created>1628525056146</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1628525056146</updated>
+      <workItem from="1628525057468" duration="914000" />
+      <workItem from="1628525986042" duration="398000" />
+      <workItem from="1628526426543" duration="1137000" />
+      <workItem from="1628588111790" duration="633000" />
+      <workItem from="1628617393263" duration="868000" />
+      <workItem from="1628669032721" duration="2132000" />
+      <workItem from="1628674858269" duration="593000" />
+      <workItem from="1628756841270" duration="3334000" />
+      <workItem from="1628778960302" duration="4687000" />
+      <workItem from="1628845577089" duration="1066000" />
+      <workItem from="1629123107465" duration="504000" />
+      <workItem from="1629290464854" duration="5955000" />
+      <workItem from="1629356007006" duration="12154000" />
+      <workItem from="1629561840195" duration="1504000" />
+      <workItem from="1629567408996" duration="594000" />
+      <workItem from="1629579336565" duration="3837000" />
+      <workItem from="1629623002378" duration="2752000" />
+      <workItem from="1629650274221" duration="2479000" />
+      <workItem from="1629707901419" duration="5407000" />
+      <workItem from="1629724960037" duration="687000" />
+      <workItem from="1629725925587" duration="6364000" />
+      <workItem from="1629812628239" duration="1456000" />
+      <workItem from="1629890916817" duration="12710000" />
+      <workItem from="1629907099133" duration="467000" />
+      <workItem from="1629907621816" duration="53000" />
+      <workItem from="1630132474194" duration="1789000" />
+      <workItem from="1630134779847" duration="1887000" />
+      <workItem from="1630138860016" duration="2881000" />
+      <workItem from="1630397153019" duration="755000" />
+      <workItem from="1630428817674" duration="875000" />
+      <workItem from="1630437129017" duration="7501000" />
+      <workItem from="1630444695141" duration="1187000" />
+      <workItem from="1630511109712" duration="1229000" />
+      <workItem from="1630512938217" duration="245000" />
+      <workItem from="1630951436250" duration="46000" />
+      <workItem from="1631038355173" duration="820000" />
+      <workItem from="1631043728405" duration="1441000" />
+      <workItem from="1631120858205" duration="2498000" />
+      <workItem from="1631696548685" duration="9000" />
+      <workItem from="1632129127681" duration="459000" />
+      <workItem from="1632230466346" duration="1297000" />
+    </task>
+    <task id="LOCAL-00001" summary="input">
+      <created>1629367662047</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1629367662047</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Revert &quot;fixed variable elimination class&quot;&#10;&#10;This reverts commit ced86d73">
+      <created>1629367736665</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1629367736665</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="3571c082-2afa-48a2-ab9f-2d7ff9b63c66">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="4257c04a-4b9e-4bb7-a336-94836d36fbb3">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/cmake-build-debug" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="4c9d2428-5419-4c9b-a54c-673d83b45b83">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our/inference" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="d1af76dd-d4eb-4847-bedf-ed01302338b6">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/S290225/Documents/UNI/PdS/PdS_Progetto/our" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="d1af76dd-d4eb-4847-bedf-ed01302338b6" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="input" />
+    <MESSAGE value="Revert &quot;fixed variable elimination class&quot;&#10;&#10;This reverts commit ced86d73" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;fixed variable elimination class&quot;&#10;&#10;This reverts commit ced86d73" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="v_map" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

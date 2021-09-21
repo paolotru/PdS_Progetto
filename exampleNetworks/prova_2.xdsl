@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Unnamed" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="A">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+			<property id="VID">A</property>
+			<property id="parents_order"></property>
+			<property id="cpt">0.1 0.9</property>
+		</cpt>
+		<cpt id="B">
+			<state id="True" />
+			<state id="False" />
+			<parents>A</parents>
+			<probabilities>0.1 0.9 0.9 0.1</probabilities>
+			<property id="Cluster">T1</property>
+			<property id="VID">B</property>
+			<property id="parents_order">A</property>
+			<property id="cpt">0.1 0.9 0.9 0.1</property>
+		</cpt>
+		<cpt id="C">
+			<state id="True" />
+			<state id="False" />
+			<parents>B</parents>
+			<probabilities>0.7 0.3 0.2 0.8</probabilities>
+			<property id="Cluster">T1</property>
+			<property id="VID">C</property>
+			<property id="parents_order">B</property>
+			<property id="cpt">0.7 0.3 0.2 0.8</property>
+		</cpt>
+		<cpt id="D">
+			<state id="True" />
+			<state id="False" />
+			<parents>C</parents>
+			<probabilities>0.4 0.6 0.7 0.3</probabilities>
+			<property id="Cluster">ARM</property>
+			<property id="VID">D</property>
+			<property id="parents_order">C</property>
+			<property id="cpt">0.4 0.6 0.7 0.3</property>
+		</cpt>
+		<cpt id="E">
+			<state id="True" />
+			<state id="False" />
+			<parents>D</parents>
+			<probabilities>0.5 0.5 0.4 0.6</probabilities>
+			<property id="Cluster">ARM</property>
+			<property id="VID">E</property>
+			<property id="parents_order">D</property>
+			<property id="cpt">0.5 0.5 0.4 0.6</property>
+		</cpt>
+		<cpt id="F">
+			<state id="True" />
+			<state id="False" />
+			<parents>B D</parents>
+			<probabilities>0.1 0.9 0.5 0.5 0.4 0.6 0.8 0.2</probabilities>
+			<property id="Cluster">T1</property>
+			<property id="VID">F</property>
+			<property id="parents_order">B D</property>
+			<property id="cpt">0.1 0.9 0.5 0.5 0.4 0.6 0.8 0.2</property>
+		</cpt>
+	</nodes>
+		<extensions>
+		<genie version="1.0" app="SMILE Apr 10 2014" name="Unnamed" faultnameformat="nodestate">
+			<node id="A">
+				<name>A</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="B">
+				<name>B</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="C">
+				<name>C</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="D">
+				<name>D</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="E">
+				<name>E</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="F">
+				<name>F</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>

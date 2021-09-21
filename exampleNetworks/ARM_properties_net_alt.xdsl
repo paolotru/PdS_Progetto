@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Unnamed" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="Tech_error_generator">
+			<state id="Error_RF" />
+			<state id="Error_L2" />
+			<state id="Error_L1D" />
+			<state id="Error_L1I" />
+			<state id="Error_LSQ" />
+			<probabilities>0.2 0.2 0.2 0.2 0.2</probabilities>
+			<property id="VID">Tech_error_generator</property>
+			<property id="parents_order"></property>
+			<property id="cpt">0.2 0.2 0.2 0.2 0.2</property>
+		</cpt>
+		<cpt id="Tech_error_RF_T1">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>Tech_error_generator</parents>
+			<probabilities>0 1 1 0 1 0 1 0 1 0</probabilities>
+			<property id="Cluster">T1</property>
+			<property id="VID">Tech_error_RF</property>
+			<property id="parents_order">Tech_error_generator</property>
+			<property id="cpt">0 1 1 0 1 0 1 0 1 0</property>
+		</cpt>
+		<cpt id="RF_ARM">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>Tech_error_RF_T1</parents>
+			<probabilities>1 0 0 1</probabilities>
+			<property id="Cluster">ARM</property>
+			<property id="VID">RF</property>
+			<property id="parents_order">Tech_error_RF</property>
+			<property id="cpt">1 0 0 1</property>
+		</cpt>
+		<cpt id="Tech_error_L2_T1">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>Tech_error_generator</parents>
+			<probabilities>1 0 0 1 1 0 1 0 1 0</probabilities>
+			<property id="Cluster">T1</property>
+			<property id="VID">Tech_error_L2</property>
+			<property id="parents_order">Tech_error_generator</property>
+			<property id="cpt">1 0 0 1 1 0 1 0 1 0</property>
+		</cpt>
+		<cpt id="L2_ARM">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>Tech_error_L2_T1</parents>
+			<probabilities>1 0 0 1</probabilities>
+			<property id="Cluster">ARM</property>
+			<property id="VID">L2</property>
+			<property id="parents_order">Tech_error_L2</property>
+			<property id="cpt">1 0 0 1</property>
+		</cpt>
+		<cpt id="Tech_error_L1D_T1">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>Tech_error_generator</parents>
+			<probabilities>1 0 1 0 0 1 1 0 1 0</probabilities>
+			<property id="Cluster">T1</property>
+			<property id="VID">Tech_error_L1D</property>
+			<property id="parents_order">Tech_error_generator</property>
+			<property id="cpt">1 0 1 0 0 1 1 0 1 0</property>
+		</cpt>
+		<cpt id="L1D_ARM">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>Tech_error_L1D_T1</parents>
+			<probabilities>1 0 0 1</probabilities>
+			<property id="Cluster">ARM</property>
+			<property id="VID">L1D</property>
+			<property id="parents_order">Tech_error_L1D</property>
+			<property id="cpt">1 0 0 1</property>
+		</cpt>
+		<cpt id="Tech_error_L1I_T1">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>Tech_error_generator</parents>
+			<probabilities>1 0 1 0 1 0 0 1 1 0</probabilities>
+			<property id="Cluster">T1</property>
+			<property id="VID">Tech_error_L1I</property>
+			<property id="parents_order">Tech_error_generator</property>
+			<property id="cpt">1 0 1 0 1 0 0 1 1 0</property>
+		</cpt>
+		<cpt id="L1I_ARM">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>Tech_error_L1I_T1</parents>
+			<probabilities>1 0 0 1</probabilities>
+			<property id="Cluster">ARM</property>
+			<property id="VID">L1I</property>
+			<property id="parents_order">Tech_error_L1I</property>
+			<property id="cpt">1 0 0 1</property>
+		</cpt>
+		<cpt id="Tech_error_LSQ_T1">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>Tech_error_generator</parents>
+			<probabilities>1 0 1 0 1 0 1 0 0 1</probabilities>
+			<property id="Cluster">T1</property>
+			<property id="VID">Tech_error_LSQ</property>
+			<property id="parents_order">Tech_error_generator</property>
+			<property id="cpt">1 0 1 0 1 0 1 0 0 1</property>
+		</cpt>
+		<cpt id="LSQ_ARM">
+			<state id="Success" />
+			<state id="Failure" />
+			<parents>Tech_error_LSQ_T1</parents>
+			<probabilities>1 0 0 1</probabilities>
+			<property id="Cluster">ARM</property>
+			<property id="VID">LSQ</property>
+			<property id="parents_order">Tech_error_LSQ</property>
+			<property id="cpt">1 0 0 1</property>
+		</cpt>
+		<cpt id="uPc_ARM">
+			<state id="Masked" />
+			<state id="ExecutiontimingError" />
+			<state id="Instructionflowchanges" />
+			<state id="InstructionReplacement" />
+			<state id="WrongDatainanOperand" />
+			<state id="NotaccessibleOperandOperandForcedSwitch" />
+			<state id="Datacorruptions" />
+			<state id="Other" />
+			<parents>RF_ARM L2_ARM L1D_ARM L1I_ARM LSQ_ARM</parents>
+			<probabilities>1 0 0 0 0 0 0 0 0.9175 0 0.005 0 0 0 0.0775 0 0.6775 0.015 0.0535 0.078 0 0.1755 0.0005 0 0 0 0 0 0 0 0 1 0.571 0.002 0.008500000000000001 0 0 0 0.4185 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0.806 0.004 0.008500000000000001 0.0125 0 0.0245 0.1445 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0.9455 0 0.0015 0 0 0 0.053 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1</probabilities>
+			<property id="Cluster">ARM</property>
+			<property id="VID">uPc</property>
+			<property id="parents_order">RF L2 L1D L1I LSQ</property>
+			<property id="cpt">1 0 0 0 0 0 0 0 0.9175 0 0.005 0 0 0 0.0775 0 0.6775 0.015 0.0535 0.078 0 0.1755 0.0005 0 0 0 0 0 0 0 0 1 0.571 0.002 0.008500000000000001 0 0 0 0.4185 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0.806 0.004 0.008500000000000001 0.0125 0 0.0245 0.1445 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0.9455 0 0.0015 0 0 0 0.053 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1</property>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="SMILE Apr 10 2014" name="Unnamed" faultnameformat="nodestate">
+			<node id="Tech_error_generator">
+				<name>Tech_error_generator</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Tech_error_RF_T1">
+				<name>Tech_error_RF</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="RF_ARM">
+				<name>RF</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Tech_error_L2_T1">
+				<name>Tech_error_L2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="L2_ARM">
+				<name>L2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Tech_error_L1D_T1">
+				<name>Tech_error_L1D</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="L1D_ARM">
+				<name>L1D</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Tech_error_L1I_T1">
+				<name>Tech_error_L1I</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="L1I_ARM">
+				<name>L1I</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="Tech_error_LSQ_T1">
+				<name>Tech_error_LSQ</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="LSQ_ARM">
+				<name>LSQ</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+			<node id="uPc_ARM">
+				<name>uPc</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>-38 -18 38 18</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
